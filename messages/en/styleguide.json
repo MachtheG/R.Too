@@ -1,0 +1,12 @@
+{
+  "title": "Styleguide",
+  "intro": "The Sotik Ledger design system: tokens, type and components.",
+  "colours": "Colours",
+  "type": "Typography",
+  "buttons": "Buttons",
+  "motifs": "Motifs",
+  "sample": { "display": "A New Chapter for Sotik.", "body": "Every number on this site is footnoted, because a new chapter should begin with the facts.", "stat": "registered voters, 2022" },
+  "btn": { "primary": "Join the campaign", "outline": "Read the plan", "accent": "Pledge your support" },
+  "teaRows": "Tea rows: hero and dividers",
+  "placeholder": "Photo slot placeholder"
+}

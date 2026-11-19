@@ -1,0 +1,35 @@
+{
+  "skipToContent": "Skip to content",
+  "candidate": "Robert Too",
+  "nav": {
+    "label": "Main",
+    "menu": "Menu",
+    "close": "Close menu",
+    "story": "Story",
+    "record": "Record",
+    "map": "The Map",
+    "plan": "The Plan",
+    "wards": "Wards",
+    "qa": "Q&A",
+    "involved": "Get involved"
+  },
+  "countdown": {
+    "days": "{count, plural, =0 {Election day} one {# day} other {# days}}",
+    "date": "10 Aug 2027",
+    "label": "Days until the General Election on 10 August 2027",
+    "addToCalendar": "Add to calendar"
+  },
+  "locale": {
+    "label": "Language",
+    "switchTo": "Badili kwa Kiswahili",
+    "short": "SW"
+  },
+  "footer": {
+    "authorised": "Authorised by [[TO CONFIRM: agent name]], for Robert Too.",
+    "demo": "Concept demo, not an official campaign site.",
+    "privacy": "Privacy",
+    "sources": "Sources",
+    "credits": "Photo credits",
+    "tagline": "A New Chapter for Sotik."
+  }
+}

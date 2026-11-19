@@ -1,0 +1,12 @@
+{
+  "title": "Mwongozo wa Muundo",
+  "intro": "Mfumo wa muundo wa The Sotik Ledger: rangi, maandishi na vipengele.",
+  "colours": "Rangi",
+  "type": "Maandishi",
+  "buttons": "Vitufe",
+  "motifs": "Michoro",
+  "sample": { "display": "Sura Mpya kwa Sotik.", "body": "Kila takwimu kwenye tovuti hii ina chanzo chake, kwa sababu sura mpya inapaswa kuanza na ukweli.", "stat": "wapiga kura waliosajiliwa, 2022" },
+  "btn": { "primary": "Jiunge na kampeni", "outline": "Soma mpango", "accent": "Ahidi uungaji mkono" },
+  "teaRows": "Mistari ya chai: kichwa na vigawanyo",
+  "placeholder": "Nafasi ya picha"
+}

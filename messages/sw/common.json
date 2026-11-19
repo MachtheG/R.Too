@@ -1,0 +1,35 @@
+{
+  "skipToContent": "Ruka hadi maudhui",
+  "candidate": "Robert Too",
+  "nav": {
+    "label": "Kuu",
+    "menu": "Menyu",
+    "close": "Funga menyu",
+    "story": "Safari",
+    "record": "Rekodi",
+    "map": "Ramani",
+    "plan": "Mpango",
+    "wards": "Wadi",
+    "qa": "Maswali",
+    "involved": "Jiunge nasi"
+  },
+  "countdown": {
+    "days": "{count, plural, =0 {Siku ya Uchaguzi} one {Siku #} other {Siku #}}",
+    "date": "10 Ago 2027",
+    "label": "Siku zilizobaki hadi Uchaguzi Mkuu tarehe 10 Agosti 2027",
+    "addToCalendar": "Ongeza kwenye kalenda"
+  },
+  "locale": {
+    "label": "Lugha",
+    "switchTo": "Switch to English",
+    "short": "EN"
+  },
+  "footer": {
+    "authorised": "Imeidhinishwa na [[TO CONFIRM: jina la wakala]], kwa niaba ya Robert Too.",
+    "demo": "Toleo la majaribio, si tovuti rasmi ya kampeni.",
+    "privacy": "Faragha",
+    "sources": "Vyanzo",
+    "credits": "Wapiga picha",
+    "tagline": "Sura Mpya kwa Sotik."
+  }
+}
