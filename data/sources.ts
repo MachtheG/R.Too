@@ -31,8 +31,8 @@ export const sources: Source[] = [
     date: "2017",
     url: "https://www.iebc.or.ke/docs/Registered%20Voters%20Per%20Contituency%20For%202017%20General%20Elections.pdf",
     primary: true,
-    verified: false,
-    note: "Sotik 2017 = 73,314 per Mzalendo; PDF not yet parsed.",
+    verified: true,
+    note: "Row: 036 BOMET / 194 SOTIK / 73,314 (171 polling stations). Parsed with pdftotext on 2026-11-19.",
   },
   {
     id: "mzalendo-sotik",
@@ -72,7 +72,7 @@ export const sources: Source[] = [
     url: "https://capitalfm.africa/iebc-officially-publishes-notice-for-2027-general-election/",
     primary: false,
     verified: true,
-    note: "Election Tue 10 Aug 2027; campaign 29 May – 7 Aug 2027.",
+    note: "Supports the election date only (Tue 10 Aug 2027) and the IEBC public notice of 14 Sep 2026. Campaign-period dates are NOT in this article.",
   },
   {
     id: "standard-election-date",

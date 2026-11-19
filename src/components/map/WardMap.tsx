@@ -38,7 +38,7 @@ export function WardMap({ wards, total, projectCount }: { wards: Ward[]; total: 
                   aria-pressed={i === sel}
                   onClick={() => setSel(i)}
                   style={{ background: s.fill, color: s.text }}
-                  className={`${span[w.slug] ?? ""} flex min-w-0 min-h-32 flex-col items-start justify-between p-3 text-left outline-offset-2 md:min-h-40 ${i === sel ? "ring-4 ring-uda" : ""}`}
+                  className={`${span[w.slug] ?? ""} flex min-w-0 min-h-32 ring-1 ring-ink/15 flex-col items-start justify-between p-3 text-left outline-offset-2 md:min-h-40 ${i === sel ? "ring-4 ring-uda" : ""}`}
                 >
                   <span className="text-sm font-semibold [overflow-wrap:anywhere] md:text-base">{w.name.replace("/", "/\u200b")}</span>
                   <span className="font-display text-2xl md:text-3xl">{fmt.format(w.voters2022)}</span>

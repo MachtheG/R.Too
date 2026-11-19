@@ -9,11 +9,11 @@
   "items": {
     "when": {
       "q": "Uchaguzi Mkuu ujao ni lini?",
-      "a": "Jumanne 10 Agosti 2027. IEBC ilichapisha tangazo tarehe 14 Septemba 2026."
+      "a": "Jumanne 10 Agosti 2027, kwa mujibu wa tangazo la umma la IEBC la tarehe 14 Septemba 2026."
     },
     "campaign": {
       "q": "Kampeni rasmi zinaanza lini?",
-      "a": "Kipindi cha kampeni cha IEBC ni kuanzia 29 Mei hadi 7 Agosti 2027, kikiisha saa 48 kabla ya siku ya kupiga kura."
+      "a": "[[TO CONFIRM: tarehe rasmi za kampeni kutoka tangazo la Gazeti la IEBC]]"
     },
     "voters": {
       "q": "Sotik ina wapiga kura wangapi waliosajiliwa?",

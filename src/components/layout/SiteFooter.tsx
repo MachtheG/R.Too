@@ -11,7 +11,7 @@ export async function SiteFooter() {
         <div className="flex flex-col gap-2 text-sm">
           <p className="font-display text-2xl text-mist">{t("tagline")}</p>
           <p>{t("authorised")}</p>
-          <p className="text-uda">{t("demo")}</p>
+          <p className="font-semibold text-mist">{t("demo")}</p>
         </div>
         <ul className="flex flex-wrap items-center gap-x-6 gap-y-2 self-start text-sm">
           <li><Link href="/privacy" className="hover:text-mist">{t("privacy")}</Link></li>

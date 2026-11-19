@@ -4,6 +4,7 @@ import { PageHeader } from "@/components/shared/PageHeader";
 import { Container } from "@/components/shared/Container";
 import { WardMap } from "@/components/map/WardMap";
 import { WardTable } from "@/components/map/WardTable";
+import { ToConfirm } from "@/components/shared/ToConfirm";
 import { numberLocale } from "@/lib/i18n-helpers";
 import { tabMetadata } from "@/lib/seo";
 import { totalWardVoters, wards } from "@data/wards";
@@ -22,7 +23,7 @@ export default async function MapPage() {
       <PageHeader eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")} />
       <Container className="flex flex-col gap-10 py-10 pb-16">
         <WardMap wards={wards} total={totalWardVoters} projectCount={projects.length} />
-        <p className="font-display text-xl md:text-2xl">{t("summary", { share: pct.format(topTwo / totalWardVoters) })}</p>
+        <p className="font-display text-xl md:text-2xl">{t("summary", { share: pct.format(topTwo / totalWardVoters) })}<ToConfirm label={t("toConfirm")} /></p>
         <WardTable wards={wards} total={totalWardVoters} locale={locale} />
         <p className="font-mono text-[11px] text-muted-foreground">{t("source")}</p>
       </Container>

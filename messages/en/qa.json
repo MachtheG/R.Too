@@ -9,11 +9,11 @@
   "items": {
     "when": {
       "q": "When is the next General Election?",
-      "a": "Tuesday 10 August 2027. IEBC published the notice on 14 September 2026."
+      "a": "Tuesday 10 August 2027, according to IEBC's public notice of 14 September 2026."
     },
     "campaign": {
       "q": "When does official campaigning start?",
-      "a": "The IEBC campaign period runs from 29 May to 7 August 2027, ending 48 hours before polling day."
+      "a": "[[TO CONFIRM: official campaign period dates from the IEBC Gazette notice]]"
     },
     "voters": {
       "q": "How many registered voters does Sotik have?",

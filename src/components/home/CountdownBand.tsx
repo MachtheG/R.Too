@@ -18,7 +18,7 @@ export async function CountdownBand() {
             <DaysLeft className="font-display text-7xl leading-none text-tea md:text-8xl dark:text-mist" />
             <span className="text-sm text-muted-foreground">{t("days")}</span>
           </p>
-          <a href="/election-2027.ics" download className="inline-flex min-h-12 items-center bg-uda px-5 font-semibold text-ink hover:bg-uda/85">
+          <a href="/election-2027.ics" download className="inline-flex min-h-12 items-center border border-tea px-5 font-semibold text-tea hover:bg-tea hover:text-mist dark:border-mist dark:text-mist">
             {t("calendar")}
           </a>
         </div>

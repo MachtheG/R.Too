@@ -8,6 +8,6 @@ DTSTAMP:20261119T000000Z
 DTSTART;VALUE=DATE:20270810
 DTEND;VALUE=DATE:20270811
 SUMMARY:Kenya General Election - vote in Sotik
-DESCRIPTION:Polls open 6am. Source: IEBC gazette notice, 14 Sep 2026.
+DESCRIPTION:Kenya General Election. Source: IEBC public notice, 14 Sep 2026.
 END:VEVENT
 END:VCALENDAR

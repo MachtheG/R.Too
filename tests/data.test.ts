@@ -14,6 +14,12 @@ describe("data integrity", () => {
   it("every stat cites a known source", () => {
     for (const s of stats) expect(ids.has(s.sourceId)).toBe(true);
   });
+  it("a stat is only 'verified' if its source is a verified primary document", () => {
+    for (const s of stats) {
+      const src = sources.find((x) => x.id === s.sourceId);
+      if (s.verified) expect(src?.primary && src.verified).toBe(true);
+    }
+  });
   it("growth 2017 to 2022 is 18%", () => {
     expect(stats.find((s) => s.key === "growth")?.value).toBe(18);
   });

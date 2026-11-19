@@ -6,7 +6,6 @@ export function PersonJsonLd({ locale }: { locale: string }) {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Robert Too",
-    honorificPrefix: "Hon.",
     url: `${siteUrl}/${locale}`,
     description: locale === "sw" ? "Mgombea Ubunge, Eneo Bunge la Sotik, Kaunti ya Bomet, 2027." : "Candidate for Member of Parliament, Sotik Constituency, Bomet County, 2027.",
     affiliation: { "@type": "PoliticalParty", name: "United Democratic Alliance (UDA)" },

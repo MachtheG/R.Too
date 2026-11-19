@@ -1,6 +1,6 @@
-// Election day: Tuesday 10 August 2027 (IEBC gazette notice, 14 Sep 2026).
+// Election day: Tuesday 10 August 2027 (IEBC public notice, 14 Sep 2026).
 // Source ids: iebc-election-notice-2027, standard-election-date.
-export const ELECTION_ISO = "2027-08-10T06:00:00+03:00"; // polls open 06:00 EAT
+export const ELECTION_ISO = "2027-08-10T00:00:00+03:00"; // start of election day, Nairobi time
 export const ELECTION_SOURCE_IDS = ["iebc-election-notice-2027", "standard-election-date"];
 
 const DAY_MS = 86_400_000;

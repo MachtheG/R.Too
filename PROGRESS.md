@@ -6,18 +6,21 @@
 - [x] Phase 4: Scaffold, design system, layout shell, /styleguide, quality gate, CI
 - [x] Phase 5: Home (Hero A)
 - [x] Phase 6: Record, Projects, Map, Plan, other tabs, ward pages
-- [ ] Phase 7: Forms, OG cards, SEO, a11y, Lighthouse, subagents
+- [x] Phase 7: Forms, OG cards, SEO, a11y, Lighthouse, subagents (fact-checker + design-critic run and fixed)
+- [x] Phase 8: README, secrets scan, GitHub push
 
 ## [[TO CONFIRM]] items
 - The "Hon." title: office, nominating body, year, gazette ref
 - Biography, education, career, honours (no public record found)
 - Official social accounts and photos (unrelated namesakes exist online)
 - Ward-level 2022 registered voters (secondary sources only; the IEBC ward PDF is needed)
-- 2017 registered voters (73,314; the IEBC PDF hasn't been parsed yet)
 - Population 227,855 and area 544 km² (need a direct read of KNBS Vol. II)
 - Sotik household count
 - WhatsApp channel link, contact email, "authorised by" name
 - Kiswahili copy needs review by a native speaker
+- Official campaign-period dates (cite the IEBC Gazette notice; the Capital FM source covers only the election date)
+- Candidacy documentation: UDA nomination or campaign letter (UDA affiliation is shown on the site)
+- Women's-enterprise pledge needs a sourced statistic
 - Things to avoid: the campaign to review the draft promises
 
 ## Notes
@@ -39,3 +42,10 @@
 - Charts are lightweight accessible CSS bar lists instead of Recharts: same data, no client JS, readable by screen readers.
 - Photo pipeline: `npm run images` (sharp) → AVIF/WebP at 640/1280/1920 + blur placeholders in data/photos.generated.json. Shot list: docs/SHOT-LIST.md.
 - Lite mode: footer toggle (auto-on with Save-Data); turns off the interactive map.
+
+## Phase 7 notes
+- Forms: volunteer, pledge, contact. Zod validation (Kenyan mobile), unticked consent stating the purpose, honeypot; stored with purpose + consent time. Adapter via FORM_ADAPTER (console / resend / supabase).
+- SEO: canonical + hreflang (en-KE, sw-KE, x-default), sitemap.xml, robots.txt, JSON-LD Person, per-locale OG share cards.
+- Lighthouse mobile (local `next start`): Accessibility 100, Best Practices 100, SEO 100 when NEXT_PUBLIC_SITE_URL matches the domain (92 locally only because the canonical points at production). Performance 91–96 across pages, median ~94: slightly under the 95 target locally; re-measure on Vercel.
+- Fact-checker verified the 2022 register, ward figures, growth, tea prices and EN/SW parity, and found no blockers. Fixed: unsupported "Hon." in JSON-LD removed; campaign-period dates and "polls open 6am" removed or marked; "gazette notice" corrected to "IEBC public notice"; ward count re-sourced; 2017 register (73,314) now verified against the IEBC PDF.
+- Design-critic fixes: dark-mode laterite text token (6.8:1), yellow focus ring on dark surfaces, yellow rationed (CTA band to tea, calendar button outlined, footer note in mist), 44px+ buttons, form borders ≥5:1, styled to-confirm chip, map tile edges.

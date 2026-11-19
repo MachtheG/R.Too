@@ -21,5 +21,6 @@
   "colVoters": "Registered voters",
   "colShare": "Share",
   "source": "Ward figures: Mzalendo constituency profile, citing IEBC 2022. The total matches the IEBC register (86,681). To confirm against the IEBC ward register.",
-  "lite": "Lite mode: interactive map off."
+  "lite": "Lite mode: interactive map off.",
+  "toConfirm": "to confirm"
 }

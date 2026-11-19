@@ -62,6 +62,7 @@
     --input: #2c4234;
     --rule: #2c4234;
     --paper-2: #1c2f23;
+    --laterite: #e08a6b;
   }
 }
 :root[data-theme="dark"] {
@@ -77,6 +78,7 @@
   --border: #2c4234;
   --rule: #2c4234;
   --paper-2: #1c2f23;
+  --laterite: #e08a6b;
 }
 
 @theme inline {
@@ -142,6 +144,10 @@
   :focus-visible {
     outline: 2px solid var(--laterite);
     outline-offset: 2px;
+  }
+  /* On dark surfaces laterite drops below 3:1; use UDA yellow (7:1+) for the focus ring. */
+  .bg-tea :focus-visible, .bg-night :focus-visible, footer :focus-visible, .bg-ink :focus-visible {
+    outline-color: var(--uda);
   }
 }
 

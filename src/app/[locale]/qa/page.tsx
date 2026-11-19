@@ -8,7 +8,7 @@ export const generateMetadata = () => tabMetadata("qa");
 
 const items = [
   { key: "when", sourceId: "iebc-election-notice-2027" },
-  { key: "campaign", sourceId: "iebc-election-notice-2027" },
+  { key: "campaign", sourceId: null },
   { key: "voters", sourceId: "iebc-rov-2022" },
   { key: "wards", sourceId: "mzalendo-sotik" },
   { key: "register", sourceId: null },

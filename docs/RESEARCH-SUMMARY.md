@@ -6,7 +6,7 @@ _2026-11-19. Every item is recorded in `data/sources.ts`._
 | Stat | Value | Status |
 |---|---|---|
 | Registered voters, 2022 | **86,681** (IEBC constituency code 194) | ✅ Verified (IEBC PDF) |
-| Registered voters, 2017 | 73,314 (+18.2% growth to 2022) | Secondary (Mzalendo citing IEBC) |
+| Registered voters, 2017 | 73,314 (+18.2% growth to 2022) | ✅ Verified (IEBC 2017 PDF, 171 polling stations) |
 | Wards | 5 | ✅ |
 | Population (KNBS 2019) | 227,855 | Secondary citing KNBS Vol. II |
 | Area | 544 km² | Secondary citing KNBS Vol. II |
