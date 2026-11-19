@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Picha",
+    "description": "Picha za kampeni Sotik."
+  },
+  "eyebrow": "Picha",
+  "title": "Mashinani Sotik.",
+  "intro": "Picha zinatoka kwenye vituo rasmi vya kampeni, kila moja na mpiga picha wake. Nafasi hizi zinaonyesha kila picha itakavyokuwa.",
+  "filters": "Chuja kwa aina",
+  "all": "Zote",
+  "category": {
+    "portrait": "Picha za mgombea",
+    "community": "Jamii",
+    "farmers": "Wakulima",
+    "women": "Wanawake",
+    "events": "Matukio",
+    "landscape": "Sotik"
+  }
+}

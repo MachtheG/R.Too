@@ -4,7 +4,8 @@ import { mkdirSync } from "node:fs";
 
 const base = process.argv[2] ?? "http://localhost:3000";
 const phase = process.argv[3] ?? "current";
-const routes = ["/en", "/sw", "/en/styleguide"];
+const tabs = ["", "/record", "/projects", "/map", "/plan", "/story", "/gallery", "/news", "/get-involved", "/contact", "/qa", "/wards", "/wards/kapletundo", "/privacy", "/sources", "/credits", "/styleguide"];
+const routes = [...tabs.map((t) => `/en${t}`), "/sw", "/sw/map"];
 const widths = [375, 768, 1440];
 const out = `docs/screenshots/${phase}`;
 mkdirSync(out, { recursive: true });

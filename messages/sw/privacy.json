@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "title": "Faragha",
+    "description": "Jinsi kampeni inavyoshughulikia data yako binafsi chini ya Sheria ya Ulinzi wa Data ya Kenya, 2019."
+  },
+  "eyebrow": "Faragha",
+  "title": "Data yako, haki zako.",
+  "updated": "Ilisasishwa: 19 Novemba 2026",
+  "sections": {
+    "who": {
+      "h": "Sisi ni nani",
+      "p": "Mdhibiti wa data ni kampeni ya Robert Too ya Ubunge, Eneo Bunge la Sotik. Mawasiliano: [[TO CONFIRM: mawasiliano na anwani ya kampeni kuhusu data]]."
+    },
+    "what": {
+      "h": "Tunachokusanya",
+      "p": "Unachoandika kwenye fomu zetu tu: jina, nambari ya simu, barua pepe (si lazima), wadi, na jinsi ungependa kusaidia. Hatukusanyi nambari ya kitambulisho wala data nyeti kama kabila, dini au afya."
+    },
+    "why": {
+      "h": "Kwa nini tunaikusanya",
+      "p": "Kupanga wanaojitolea, kurekodi ahadi za uungaji mkono, na kujibu maswali yako. Hatuitumii kwa jambo jingine, na hatuiuzi wala kuikodisha."
+    },
+    "basis": {
+      "h": "Msingi wa kisheria",
+      "p": "Idhini yako, chini ya kifungu cha 30 cha Sheria ya Ulinzi wa Data, 2019. Kila fomu inaomba idhini kwa kisanduku tofauti kisichowekwa alama, na inaeleza madhumuni."
+    },
+    "keep": {
+      "h": "Muda tunaoihifadhi",
+      "p": "Hadi mwisho wa kipindi cha uchaguzi wa 2027 (31 Desemba 2027), kisha inafutwa, isipokuwa ukiomba ifutwe mapema."
+    },
+    "share": {
+      "h": "Tunaowashirikisha",
+      "p": "Watoa huduma wanaohifadhi au kutuma data kwa niaba yetu chini ya mkataba tu. Data inaweza kuhifadhiwa nje ya Kenya na watoa huduma hawa; tunatumia tu watoa huduma wenye kinga chini ya kifungu cha 48 cha Sheria."
+    },
+    "rights": {
+      "h": "Haki zako",
+      "p": "Unaweza kuomba kuona, kusahihisha au kufuta data yako, kuondoa idhini wakati wowote, au kupinga matumizi yake. Andika kwa mawasiliano yaliyo hapo juu. Unaweza pia kulalamika kwa Ofisi ya Kamishna wa Ulinzi wa Data (ODPC)."
+    },
+    "cookies": {
+      "h": "Vidakuzi",
+      "p": "Tovuti hii haitumii vidakuzi vya matangazo wala vya ufuatiliaji."
+    }
+  }
+}

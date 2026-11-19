@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "title": "Contact",
+    "description": "Contact the Robert Too campaign."
+  },
+  "eyebrow": "Contact",
+  "title": "Talk to the campaign.",
+  "email": "Email",
+  "phone": "Phone",
+  "office": "Campaign office",
+  "pending": "[[TO CONFIRM]]",
+  "formsSoon": "A contact form opens in the next build phase."
+}

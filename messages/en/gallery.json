@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Gallery",
+    "description": "Photos from the campaign trail in Sotik."
+  },
+  "eyebrow": "Gallery",
+  "title": "On the ground in Sotik.",
+  "intro": "Photos arrive from the campaign's official channels, each credited. These slots show what each shot will be.",
+  "filters": "Filter by category",
+  "all": "All",
+  "category": {
+    "portrait": "Portraits",
+    "community": "Community",
+    "farmers": "Farmers",
+    "women": "Women",
+    "events": "Events",
+    "landscape": "Sotik"
+  }
+}

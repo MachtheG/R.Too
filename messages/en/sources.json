@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "Sources",
+    "description": "Every source behind every number on this site."
+  },
+  "eyebrow": "Sources",
+  "title": "Every number, footnoted.",
+  "intro": "Each figure on this site links here. Primary sources are official documents; secondary sources cite them. Figures from secondary sources are marked to confirm.",
+  "primary": "Primary",
+  "secondary": "Secondary",
+  "verified": "Verified",
+  "unverified": "To confirm",
+  "open": "Open source"
+}

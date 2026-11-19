@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "title": "Shukrani",
+    "description": "Wapiga picha, data na fonti, pamoja na leseni zake."
+  },
+  "eyebrow": "Shukrani",
+  "title": "Shukrani na leseni.",
+  "photos": "Picha",
+  "photosEmpty": "Hakuna picha zilizochapishwa bado. Kila picha itatajwa hapa pamoja na leseni yake.",
+  "data": "Data",
+  "fonts": "Fonti",
+  "licence": "Leseni"
+}

@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "title": "Privacy",
+    "description": "How the campaign handles your personal data under the Kenya Data Protection Act, 2019."
+  },
+  "eyebrow": "Privacy",
+  "title": "Your data, your rights.",
+  "updated": "Last updated: 19 November 2026",
+  "sections": {
+    "who": {
+      "h": "Who we are",
+      "p": "The data controller is the Robert Too campaign for Member of Parliament, Sotik Constituency. Contact: [[TO CONFIRM: campaign data contact and address]]."
+    },
+    "what": {
+      "h": "What we collect",
+      "p": "Only what you type into our forms: your name, phone number, optional email, ward, and how you would like to help. We do not collect your ID number, and we do not ask for sensitive personal data such as ethnicity, religion or health."
+    },
+    "why": {
+      "h": "Why we collect it",
+      "p": "To organise volunteers, record pledges of support, and answer your questions. We use it for nothing else, and we never sell or rent it."
+    },
+    "basis": {
+      "h": "Legal basis",
+      "p": "Your consent, under section 30 of the Data Protection Act, 2019. Each form asks for consent with a separate, unticked box, and states the purpose."
+    },
+    "keep": {
+      "h": "How long we keep it",
+      "p": "Until the end of the 2027 election cycle (31 December 2027), then it is deleted, unless you ask us to delete it sooner."
+    },
+    "share": {
+      "h": "Who we share it with",
+      "p": "Only with service providers that store or send data for us under contract. Data may be stored outside Kenya by these providers; we only use providers that offer safeguards under section 48 of the Act."
+    },
+    "rights": {
+      "h": "Your rights",
+      "p": "You may ask to see, correct or delete your data, withdraw consent at any time, or object to its use. Write to the contact above. You can also complain to the Office of the Data Protection Commissioner (ODPC)."
+    },
+    "cookies": {
+      "h": "Cookies",
+      "p": "This site uses no advertising or tracking cookies."
+    }
+  }
+}

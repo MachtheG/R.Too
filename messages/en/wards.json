@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "title": "Wards",
+    "description": "Sotik's five wards: registered voters and local priorities."
+  },
+  "eyebrow": "My constituency",
+  "title": "Five wards. One Sotik.",
+  "intro": "Each ward has its own page: its voters, its priorities and Robert's work there.",
+  "voters": "registered voters, 2022",
+  "share": "of Sotik",
+  "open": "Open",
+  "detail": {
+    "back": "All wards",
+    "rank": "Ward {rank} of 5 by registered voters",
+    "priorities": "Local priorities",
+    "prioritiesPending": "[[TO CONFIRM: ward priorities from the campaign's community meetings]]",
+    "projects": "Initiatives in this ward",
+    "noProjects": "No documented initiatives in this ward yet.",
+    "photo": "Robert Too in {ward}"
+  },
+  "toConfirm": "to confirm"
+}

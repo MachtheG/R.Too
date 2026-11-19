@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "The Plan",
+    "description": "Three draft pledges for Sotik, 2027–2032, each from a documented need."
+  },
+  "eyebrow": "03 · The plan · 2027–2032 · draft",
+  "title": "Three pledges. Each starts from a documented need.",
+  "draftNote": "These pledges are drafts written from public evidence. The campaign will confirm them.",
+  "why": "Why: the evidence",
+  "for": {
+    "tea": "For tea farmers",
+    "dairy": "For dairy farmers",
+    "women": "For women"
+  },
+  "tea": {
+    "title": "A fair price for tea",
+    "body": "Champion transparent green-leaf pricing and accountable factory boards in Parliament.",
+    "why": "Bomet tea growers have disputed a green-leaf rate of KSh 23 against the KSh 26 they were promised."
+  },
+  "dairy": {
+    "title": "Dairy that pays",
+    "body": "Lobby for milk cooling capacity, improved breeds and disease control in every ward.",
+    "why": "The county factsheet lists cooling plants, breeds and disease control as Sotik dairy constraints, and high feed costs are behind a milk shortage."
+  },
+  "women": {
+    "title": "Women's enterprise",
+    "body": "Open doors to affordable credit and markets for women's groups across all five wards.",
+    "why": "[[TO CONFIRM: sourced statistic on women's groups in Sotik]]"
+  },
+  "photo": "Photo",
+  "askTitle": "What should pledge four be?",
+  "ask": "Ask Robert"
+}

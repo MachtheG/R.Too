@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "title": "Credits",
+    "description": "Photo, data and font credits and licences."
+  },
+  "eyebrow": "Credits",
+  "title": "Credits and licences.",
+  "photos": "Photos",
+  "photosEmpty": "No photographs are published yet. Each photo will be credited here with its licence.",
+  "data": "Data",
+  "fonts": "Fonts",
+  "licence": "Licence"
+}

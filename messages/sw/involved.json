@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "title": "Jiunge nasi",
+    "description": "Jitolee, ahidi uungaji mkono au jiunge na chaneli ya WhatsApp."
+  },
+  "eyebrow": "Jiunge nasi",
+  "title": "Andika sura inayofuata pamoja nasi.",
+  "intro": "Jitolee katika wadi yako, ahidi uungaji mkono, au fuatilia kampeni kwenye WhatsApp.",
+  "whatsapp": {
+    "title": "Chaneli ya WhatsApp",
+    "body": "Habari za kampeni, matukio na ukweli, moja kwa moja kwenye simu yako.",
+    "cta": "Jiunge na chaneli",
+    "pending": "[[TO CONFIRM: kiungo cha chaneli ya WhatsApp]]"
+  },
+  "volunteer": {
+    "title": "Jitolee",
+    "body": "Tuambie wadi yako na jinsi unavyoweza kusaidia."
+  },
+  "pledge": {
+    "title": "Ahidi uungaji mkono",
+    "body": "Ongeza jina lako kwa wanaounga mkono sura mpya ya Sotik."
+  },
+  "formsSoon": "Fomu zitafunguliwa katika awamu ijayo, pamoja na idhini kamili kwa mujibu wa Sheria ya Ulinzi wa Data."
+}

@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "Vyanzo",
+    "description": "Kila chanzo cha kila takwimu kwenye tovuti hii."
+  },
+  "eyebrow": "Vyanzo",
+  "title": "Kila takwimu, na chanzo chake.",
+  "intro": "Kila takwimu kwenye tovuti hii inaunganisha hapa. Vyanzo vya msingi ni hati rasmi; vya upili vinazinukuu. Takwimu za vyanzo vya upili zimewekwa alama ya kuthibitishwa.",
+  "primary": "Msingi",
+  "secondary": "Upili",
+  "verified": "Imethibitishwa",
+  "unverified": "Kuthibitishwa",
+  "open": "Fungua chanzo"
+}

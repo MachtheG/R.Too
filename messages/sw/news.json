@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "title": "Habari",
+    "description": "Habari za Sotik na Bomet kwa wakulima na familia, kwa muhtasari na viungo."
+  },
+  "eyebrow": "Habari",
+  "title": "Kinachoendelea Sotik.",
+  "intro": "Muhtasari wetu wa mstari mmoja, na viungo vya habari asili. Habari za kampeni zitaonekana hapa.",
+  "read": "Soma kwenye {publisher}",
+  "items": {
+    "election": "IEBC yathibitisha Jumanne 10 Agosti 2027 kuwa siku ya uchaguzi; kampeni ni kuanzia 29 Mei hadi 7 Agosti.",
+    "tea": "Wakulima wa chai Bomet wataka bei ya majani mabichi ya KSh 23 ikaguliwe.",
+    "milk": "Upungufu wa maziwa Bomet huku gharama ya chakula cha mifugo ikiwalazimisha wakulima kuacha ufugaji.",
+    "value": "Kaunti ya Bomet yaelekea kuongeza thamani ya mazao ili kuinua mapato ya wakulima."
+  }
+}

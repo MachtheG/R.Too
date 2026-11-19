@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "The Map",
+    "description": "Sotik's registered voters, ward by ward (IEBC 2022)."
+  },
+  "eyebrow": "The map",
+  "title": "Sotik's voters, ward by ward.",
+  "intro": "Robert is a first-time candidate, so there is no past result to map. This shows where Sotik's 86,681 registered voters live, by ward.",
+  "selected": "Selected ward",
+  "voters": "registered voters, 2022",
+  "share": "of Sotik's registered voters",
+  "open": "Open ward page",
+  "legendLow": "Fewer voters",
+  "legendHigh": "More voters",
+  "schematic": "Schematic map: each tile is a ward, sized equally and shaded by registered voters. Real ward outlines will replace it once openly licensed boundaries are confirmed.",
+  "overlay": "Show projects",
+  "overlayEmpty": "No documented projects to overlay yet.",
+  "summary": "Kapletundo and Chemagel together hold {share} of Sotik's registered voters.",
+  "tableCaption": "Registered voters by ward, 2022",
+  "colWard": "Ward",
+  "colVoters": "Registered voters",
+  "colShare": "Share",
+  "source": "Ward figures: Mzalendo constituency profile, citing IEBC 2022. The total matches the IEBC register (86,681). To confirm against the IEBC ward register.",
+  "lite": "Lite mode: interactive map off."
+}

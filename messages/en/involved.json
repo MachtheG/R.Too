@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "title": "Get involved",
+    "description": "Volunteer, pledge your support or join the WhatsApp channel."
+  },
+  "eyebrow": "Get involved",
+  "title": "Write the next chapter with us.",
+  "intro": "Volunteer in your ward, pledge your support, or follow the campaign on WhatsApp.",
+  "whatsapp": {
+    "title": "WhatsApp channel",
+    "body": "Campaign updates, events and facts, straight to your phone.",
+    "cta": "Join the channel",
+    "pending": "[[TO CONFIRM: WhatsApp channel link]]"
+  },
+  "volunteer": {
+    "title": "Volunteer",
+    "body": "Tell us your ward and how you can help."
+  },
+  "pledge": {
+    "title": "Pledge your support",
+    "body": "Add your name to the people backing a new chapter for Sotik."
+  },
+  "formsSoon": "The forms open in the next build phase, with full Data Protection Act consent."
+}

@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "Ramani",
+    "description": "Wapiga kura waliosajiliwa wa Sotik, wadi kwa wadi (IEBC 2022)."
+  },
+  "eyebrow": "Ramani",
+  "title": "Wapiga kura wa Sotik, wadi kwa wadi.",
+  "intro": "Robert ni mgombea kwa mara ya kwanza, hivyo hakuna matokeo ya awali. Ramani hii inaonyesha walipo wapiga kura 86,681 wa Sotik, kwa wadi.",
+  "selected": "Wadi iliyochaguliwa",
+  "voters": "wapiga kura waliosajiliwa, 2022",
+  "share": "ya wapiga kura wa Sotik",
+  "open": "Fungua ukurasa wa wadi",
+  "legendLow": "Wachache",
+  "legendHigh": "Wengi",
+  "schematic": "Ramani ya mfano: kila kisanduku ni wadi, kimetiwa rangi kwa idadi ya wapiga kura. Mipaka halisi itawekwa baada ya kuthibitisha leseni ya data.",
+  "overlay": "Onyesha miradi",
+  "overlayEmpty": "Hakuna miradi yenye hati ya kuonyesha bado.",
+  "summary": "Kapletundo na Chemagel kwa pamoja zina {share} ya wapiga kura wa Sotik.",
+  "tableCaption": "Wapiga kura waliosajiliwa kwa wadi, 2022",
+  "colWard": "Wadi",
+  "colVoters": "Wapiga kura",
+  "colShare": "Asilimia",
+  "source": "Takwimu za wadi: Mzalendo, ikinukuu IEBC 2022. Jumla inalingana na rejista ya IEBC (86,681). Kuthibitishwa na rejista ya wadi ya IEBC.",
+  "lite": "Hali nyepesi: ramani shirikishi imezimwa."
+}

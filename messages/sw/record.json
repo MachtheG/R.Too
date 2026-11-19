@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "title": "Rekodi",
+    "description": "Alichofanya Robert Too, kila jambo na hati yake."
+  },
+  "eyebrow": "02 · Rekodi",
+  "title": "Alichofanya Robert, pamoja na hati.",
+  "intro": "Kila kipengele kinaeleza nafasi yake halisi (aliongoza, alianzisha, alifadhili, alishawishi, aliunga mkono) na kuunganisha ushahidi. Bila hati, hatuchapishi.",
+  "timeline": "Historia",
+  "toConfirm": "kuthibitishwa",
+  "bySector": "Miradi kwa sekta",
+  "byYear": "Fedha kwa mwaka (KSh)",
+  "approved": "Mgao ulioidhinishwa",
+  "spent": "Matumizi halisi",
+  "chartsEmpty": "Chati zitaonekana baada ya kuongeza vipengele vyenye hati.",
+  "ledgerCta": "Tazama miradi yote",
+  "count": "{count, plural, =0 {Hakuna mradi wenye hati bado} one {Mradi # wenye hati} other {Miradi # yenye hati}}"
+}

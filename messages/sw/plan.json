@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Mpango",
+    "description": "Ahadi tatu za rasimu kwa Sotik, 2027–2032, kila moja kutokana na hitaji lililothibitishwa."
+  },
+  "eyebrow": "03 · Mpango · 2027–2032 · rasimu",
+  "title": "Ahadi tatu. Kila moja inaanza na hitaji lililothibitishwa.",
+  "draftNote": "Ahadi hizi ni rasimu zilizoandikwa kutokana na ushahidi wa umma. Kampeni itazithibitisha.",
+  "why": "Kwa nini: ushahidi",
+  "for": {
+    "tea": "Kwa wakulima wa chai",
+    "dairy": "Kwa wafugaji wa ng'ombe wa maziwa",
+    "women": "Kwa wanawake"
+  },
+  "tea": {
+    "title": "Bei ya haki kwa chai",
+    "body": "Kutetea uwazi katika bei ya majani mabichi na uwajibikaji wa bodi za viwanda Bungeni.",
+    "why": "Wakulima wa chai wa Bomet wamepinga bei ya KSh 23 badala ya KSh 26 waliyoahidiwa."
+  },
+  "dairy": {
+    "title": "Maziwa yenye faida",
+    "body": "Kushawishi vipozaji vya maziwa, mifugo bora na udhibiti wa magonjwa katika kila wadi.",
+    "why": "Ripoti ya kaunti inaorodhesha vipozaji, mifugo na udhibiti wa magonjwa kama changamoto za Sotik; gharama ya chakula cha mifugo imesababisha upungufu wa maziwa."
+  },
+  "women": {
+    "title": "Biashara za wanawake",
+    "body": "Kufungua mikopo nafuu na masoko kwa vikundi vya wanawake katika wadi zote tano.",
+    "why": "[[TO CONFIRM: takwimu ya vikundi vya wanawake Sotik]]"
+  },
+  "photo": "Picha",
+  "askTitle": "Ahadi ya nne iwe ipi?",
+  "ask": "Muulize Robert"
+}

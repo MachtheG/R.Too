@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "title": "The Record",
+    "description": "What Robert Too has done, each item backed by a document."
+  },
+  "eyebrow": "02 · The record",
+  "title": "What Robert has done, with the documents.",
+  "intro": "Each entry states his exact role (led, founded, sponsored, lobbied, supported) and links to its proof. Entries without a document are not published.",
+  "timeline": "Timeline",
+  "toConfirm": "to confirm",
+  "bySector": "Initiatives by sector",
+  "byYear": "Funds by year (KSh)",
+  "approved": "Approved allocation",
+  "spent": "Actual spending",
+  "chartsEmpty": "Charts appear once documented entries are added.",
+  "ledgerCta": "Browse every initiative",
+  "count": "{count, plural, =0 {No documented initiatives yet} one {# documented initiative} other {# documented initiatives}}"
+}

@@ -11,7 +11,12 @@
     "plan": "The Plan",
     "wards": "Wards",
     "qa": "Q&A",
-    "involved": "Get involved"
+    "involved": "Get involved",
+    "projects": "Projects",
+    "gallery": "Gallery",
+    "news": "News",
+    "contact": "Contact",
+    "more": "More"
   },
   "countdown": {
     "days": "{count, plural, =0 {Election day} one {# day} other {# days}}",
@@ -31,5 +36,9 @@
     "sources": "Sources",
     "credits": "Photo credits",
     "tagline": "A New Chapter for Sotik."
+  },
+  "lite": {
+    "off": "Lite mode: off (for slow networks)",
+    "on": "Lite mode: on"
   }
 }

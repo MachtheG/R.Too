@@ -7,7 +7,7 @@ import { MobileMenu } from "./MobileMenu";
 
 export async function SiteHeader() {
   const t = await getTranslations("common");
-  const items = navItems.map((n) => ({ href: n.href, label: t(`nav.${n.key}`) }));
+  const items = navItems.map((n) => ({ href: n.href, label: t(`nav.${n.key}`), primary: n.primary }));
 
   return (
     <header className="sticky top-0 z-40 border-b border-rule bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/85">
@@ -15,9 +15,9 @@ export async function SiteHeader() {
         <Link href="/" className="font-display text-lg font-semibold text-tea md:text-xl dark:text-mist">
           {t("candidate")}
         </Link>
-        <nav aria-label={t("nav.label")} className="hidden lg:block">
+        <nav aria-label={t("nav.label")} className="hidden xl:block">
           <ul className="flex gap-6 text-sm">
-            {items.map((i) => (
+            {items.filter((i) => i.primary).map((i) => (
               <li key={i.href}>
                 <Link href={i.href} className="hover:text-laterite">{i.label}</Link>
               </li>
@@ -27,7 +27,7 @@ export async function SiteHeader() {
         <div className="flex items-center gap-2">
           <CountdownPill />
           <LocaleSwitch />
-          <MobileMenu items={items} menuLabel={t("nav.menu")} closeLabel={t("nav.close")} />
+          <MobileMenu items={items.map(({ href, label }) => ({ href, label }))} menuLabel={t("nav.menu")} closeLabel={t("nav.close")} />
         </div>
       </div>
     </header>

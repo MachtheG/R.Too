@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { LiteToggle } from "./LiteToggle";
 
 export async function SiteFooter() {
   const t = await getTranslations("common.footer");
@@ -12,10 +13,11 @@ export async function SiteFooter() {
           <p>{t("authorised")}</p>
           <p className="text-uda">{t("demo")}</p>
         </div>
-        <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+        <ul className="flex flex-wrap items-center gap-x-6 gap-y-2 self-start text-sm">
           <li><Link href="/privacy" className="hover:text-mist">{t("privacy")}</Link></li>
           <li><Link href="/sources" className="hover:text-mist">{t("sources")}</Link></li>
           <li><Link href="/credits" className="hover:text-mist">{t("credits")}</Link></li>
+          <li><LiteToggle /></li>
         </ul>
       </div>
     </footer>

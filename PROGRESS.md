@@ -5,7 +5,8 @@
 - [x] Phase 3: Creative direction + design canvas (Hero A chosen)
 - [x] Phase 4: Scaffold, design system, layout shell, /styleguide, quality gate, CI
 - [x] Phase 5: Home (Hero A)
-- [ ] Phase 6: Record, Projects, Map, Plan, other tabs, ward pages
+- [x] Phase 6: Record, Projects, Map, Plan, other tabs, ward pages
+- [ ] Phase 7: Forms, OG cards, SEO, a11y, Lighthouse, subagents
 
 ## [[TO CONFIRM]] items
 - The "Hon." title: office, nominating body, year, gazette ref
@@ -29,3 +30,12 @@
 - Removed an unexpected `cn` npm package that shadcn added; `cn()` now uses clsx + tailwind-merge.
 - Gate: `npm run gate`. Screenshots: `npm run screenshots -- <url> <phase>` → docs/screenshots/.
 - Arriving with later phases: Motion usage, MapLibre, Recharts, React Hook Form, sharp image pipeline.
+
+## Phase 6 notes
+- 17 tabs + 5 ward pages, all in EN/SW. Every tab has its own messages/<locale>/<tab>.json and components/<tab>/ folder.
+- Projects ledger (`data/projects.ts`) is **empty by design**: no documented initiatives yet. Filters, charts and detail pages are built and tested against fixtures; they fill in as soon as entries with documents are added.
+- `/projects/_none` is a sentinel that Cache Components needs while the ledger is empty; it returns 404 and goes away automatically when the first project is added.
+- Map is a schematic tile map (not geographic) until openly licensed ward GeoJSON is confirmed; MapLibre not yet installed for that reason. Projects overlay toggle is disabled while the ledger is empty.
+- Charts are lightweight accessible CSS bar lists instead of Recharts: same data, no client JS, readable by screen readers.
+- Photo pipeline: `npm run images` (sharp) → AVIF/WebP at 640/1280/1920 + blur placeholders in data/photos.generated.json. Shot list: docs/SHOT-LIST.md.
+- Lite mode: footer toggle (auto-on with Save-Data); turns off the interactive map.

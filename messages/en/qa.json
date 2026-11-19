@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "title": "Q&A",
+    "description": "Answers to common questions about voting in Sotik and the campaign."
+  },
+  "eyebrow": "Q&A",
+  "title": "Questions, answered.",
+  "intro": "Facts about voting in Sotik, each with its source. Questions for Robert himself can be sent from the Contact page.",
+  "items": {
+    "when": {
+      "q": "When is the next General Election?",
+      "a": "Tuesday 10 August 2027. IEBC published the notice on 14 September 2026."
+    },
+    "campaign": {
+      "q": "When does official campaigning start?",
+      "a": "The IEBC campaign period runs from 29 May to 7 August 2027, ending 48 hours before polling day."
+    },
+    "voters": {
+      "q": "How many registered voters does Sotik have?",
+      "a": "86,681, according to the IEBC register for the 2022 General Election."
+    },
+    "wards": {
+      "q": "Which wards make up Sotik?",
+      "a": "Five: Kapletundo, Chemagel, Kipsonoi, Ndanai/Abosi and Rongena/Manaret."
+    },
+    "register": {
+      "q": "How do I check that I am registered?",
+      "a": "Use IEBC's official voter verification services, or visit your IEBC constituency office in Sotik."
+    }
+  },
+  "source": "Source"
+}

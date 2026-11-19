@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "title": "Wadi",
+    "description": "Wadi tano za Sotik: wapiga kura na vipaumbele."
+  },
+  "eyebrow": "Eneo bunge langu",
+  "title": "Wadi tano. Sotik moja.",
+  "intro": "Kila wadi ina ukurasa wake: wapiga kura, vipaumbele na kazi ya Robert huko.",
+  "voters": "wapiga kura waliosajiliwa, 2022",
+  "share": "ya Sotik",
+  "open": "Fungua",
+  "detail": {
+    "back": "Wadi zote",
+    "rank": "Wadi ya {rank} kati ya 5 kwa idadi ya wapiga kura",
+    "priorities": "Vipaumbele vya eneo",
+    "prioritiesPending": "[[TO CONFIRM: vipaumbele vya wadi kutoka mikutano ya kampeni]]",
+    "projects": "Miradi katika wadi hii",
+    "noProjects": "Hakuna mradi wenye hati katika wadi hii bado.",
+    "photo": "Robert Too huko {ward}"
+  },
+  "toConfirm": "kuthibitishwa"
+}

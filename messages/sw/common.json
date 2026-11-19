@@ -11,7 +11,12 @@
     "plan": "Mpango",
     "wards": "Wadi",
     "qa": "Maswali",
-    "involved": "Jiunge nasi"
+    "involved": "Jiunge nasi",
+    "projects": "Miradi",
+    "gallery": "Picha",
+    "news": "Habari",
+    "contact": "Mawasiliano",
+    "more": "Zaidi"
   },
   "countdown": {
     "days": "{count, plural, =0 {Siku ya Uchaguzi} one {Siku #} other {Siku #}}",
@@ -31,5 +36,9 @@
     "sources": "Vyanzo",
     "credits": "Wapiga picha",
     "tagline": "Sura Mpya kwa Sotik."
+  },
+  "lite": {
+    "off": "Hali nyepesi: imezimwa (kwa mtandao wa polepole)",
+    "on": "Hali nyepesi: imewashwa"
   }
 }

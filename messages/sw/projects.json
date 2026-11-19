@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "title": "Miradi",
+    "description": "Orodha ya miradi: chuja kwa sekta, wadi na mwaka."
+  },
+  "eyebrow": "Orodha ya miradi",
+  "title": "Kila mradi, unaoweza kuchujwa.",
+  "intro": "Chuja kwa sekta, wadi na mwaka. Vichujio hubaki kwenye anwani, ili ushiriki unachokiona.",
+  "filters": {
+    "label": "Chuja miradi",
+    "sector": "Sekta",
+    "ward": "Wadi",
+    "year": "Mwaka",
+    "all": "Zote",
+    "clear": "Ondoa vichujio"
+  },
+  "empty": "Hakuna mradi wenye hati unaolingana. Orodha inathibitishwa na kampeni: vipengele huchapishwa tu vikiwa na hati.",
+  "col": {
+    "name": "Mradi",
+    "sector": "Sekta",
+    "ward": "Wadi",
+    "year": "Mwaka",
+    "role": "Nafasi yake",
+    "amount": "Kiasi",
+    "status": "Hali"
+  },
+  "detail": {
+    "back": "Miradi yote",
+    "role": "Nafasi yake",
+    "funding": "Chanzo cha fedha",
+    "amount": "Kiasi",
+    "status": "Hali",
+    "sources": "Vyanzo",
+    "gallery": "Picha za maendeleo",
+    "allWards": "Wadi zote"
+  },
+  "amountKind": {
+    "approved": "mgao ulioidhinishwa",
+    "spent": "uliotumika"
+  },
+  "sector": {
+    "education": "Elimu",
+    "health": "Afya",
+    "water": "Maji",
+    "roads": "Barabara",
+    "security": "Usalama",
+    "bursaries": "Basari",
+    "agriculture": "Kilimo",
+    "sports": "Michezo",
+    "environment": "Mazingira",
+    "women": "Wanawake"
+  },
+  "role": {
+    "sponsored": "Alifadhili",
+    "lobbied": "Alishawishi",
+    "allocated": "Alitenga",
+    "oversaw": "Alisimamia",
+    "delivered": "Alitekeleza",
+    "founded": "Alianzisha",
+    "led": "Aliongoza",
+    "supported": "Aliunga mkono"
+  },
+  "status": {
+    "approved": "Imeidhinishwa",
+    "ongoing": "Inaendelea",
+    "complete": "Imekamilika"
+  }
+}

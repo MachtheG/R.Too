@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "title": "News",
+    "description": "Sotik and Bomet news that matters to farmers and families, summarised with links."
+  },
+  "eyebrow": "News",
+  "title": "What is happening in Sotik.",
+  "intro": "Our own one-line summaries, with links to the original reporting. Campaign news will appear here as it happens.",
+  "read": "Read at {publisher}",
+  "items": {
+    "election": "IEBC confirms Tuesday 10 August 2027 as election day, with the campaign period from 29 May to 7 August.",
+    "tea": "Bomet tea farmers call for a review of green-leaf rates held at KSh 23.",
+    "milk": "A milk shortage hits Bomet as high feed costs push farmers out of dairy.",
+    "value": "Bomet County turns to value addition to raise farm incomes."
+  }
+}

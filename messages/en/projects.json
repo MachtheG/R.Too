@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "title": "Projects",
+    "description": "The projects ledger: filter by sector, ward and year."
+  },
+  "eyebrow": "Projects ledger",
+  "title": "Every initiative, filterable.",
+  "intro": "Filter by sector, ward and year. Filters stay in the address bar, so you can share exactly what you see.",
+  "filters": {
+    "label": "Filter projects",
+    "sector": "Sector",
+    "ward": "Ward",
+    "year": "Year",
+    "all": "All",
+    "clear": "Clear filters"
+  },
+  "empty": "No documented initiatives match. The ledger is being verified with the campaign: entries go live only with a supporting document.",
+  "col": {
+    "name": "Initiative",
+    "sector": "Sector",
+    "ward": "Ward",
+    "year": "Year",
+    "role": "His role",
+    "amount": "Amount",
+    "status": "Status"
+  },
+  "detail": {
+    "back": "All projects",
+    "role": "His role",
+    "funding": "Funding source",
+    "amount": "Amount",
+    "status": "Status",
+    "sources": "Sources",
+    "gallery": "Progress photos",
+    "allWards": "All wards"
+  },
+  "amountKind": {
+    "approved": "approved allocation",
+    "spent": "spent"
+  },
+  "sector": {
+    "education": "Education",
+    "health": "Health",
+    "water": "Water",
+    "roads": "Roads",
+    "security": "Security",
+    "bursaries": "Bursaries",
+    "agriculture": "Agriculture",
+    "sports": "Sports",
+    "environment": "Environment",
+    "women": "Women"
+  },
+  "role": {
+    "sponsored": "Sponsored",
+    "lobbied": "Lobbied for",
+    "allocated": "Allocated",
+    "oversaw": "Oversaw",
+    "delivered": "Delivered",
+    "founded": "Founded",
+    "led": "Led",
+    "supported": "Supported"
+  },
+  "status": {
+    "approved": "Approved",
+    "ongoing": "Ongoing",
+    "complete": "Complete"
+  }
+}

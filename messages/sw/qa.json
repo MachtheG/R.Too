@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "title": "Maswali",
+    "description": "Majibu ya maswali kuhusu kupiga kura Sotik na kampeni."
+  },
+  "eyebrow": "Maswali",
+  "title": "Maswali na majibu.",
+  "intro": "Ukweli kuhusu kupiga kura Sotik, kila jibu na chanzo chake. Maswali kwa Robert mwenyewe yanaweza kutumwa kupitia ukurasa wa Mawasiliano.",
+  "items": {
+    "when": {
+      "q": "Uchaguzi Mkuu ujao ni lini?",
+      "a": "Jumanne 10 Agosti 2027. IEBC ilichapisha tangazo tarehe 14 Septemba 2026."
+    },
+    "campaign": {
+      "q": "Kampeni rasmi zinaanza lini?",
+      "a": "Kipindi cha kampeni cha IEBC ni kuanzia 29 Mei hadi 7 Agosti 2027, kikiisha saa 48 kabla ya siku ya kupiga kura."
+    },
+    "voters": {
+      "q": "Sotik ina wapiga kura wangapi waliosajiliwa?",
+      "a": "86,681, kwa mujibu wa rejista ya IEBC ya Uchaguzi Mkuu wa 2022."
+    },
+    "wards": {
+      "q": "Sotik ina wadi zipi?",
+      "a": "Tano: Kapletundo, Chemagel, Kipsonoi, Ndanai/Abosi na Rongena/Manaret."
+    },
+    "register": {
+      "q": "Nitajuaje kama nimesajiliwa?",
+      "a": "Tumia huduma rasmi za IEBC za kuthibitisha wapiga kura, au tembelea ofisi ya IEBC ya eneo bunge la Sotik."
+    }
+  },
+  "source": "Chanzo"
+}
