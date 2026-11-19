@@ -1,7 +1,89 @@
 {
-  "meta": { "title": "Robert Too: A New Chapter for Sotik", "description": "Robert Too for Member of Parliament, Sotik Constituency, 2027." },
-  "eyebrow": "Sotik Constituency · Member of Parliament · UDA",
-  "headline": "A New Chapter for Sotik.",
-  "subline": "Sura Mpya kwa Sotik.",
-  "comingSoon": "The full home page arrives in Phase 5."
+  "meta": {
+    "title": "Robert Too: A New Chapter for Sotik",
+    "description": "Robert Too for Member of Parliament, Sotik Constituency, 2027. Every number footnoted."
+  },
+  "hero": {
+    "eyebrow": "Sotik Constituency · Member of Parliament · UDA",
+    "headline": "A New Chapter for Sotik.",
+    "subline": "Sura Mpya kwa Sotik.",
+    "ctaPrimary": "Join the campaign",
+    "ctaSecondary": "Read the plan",
+    "photoLabel": "Photo slot · 4:5",
+    "photoNote": "Robert Too among tea farmers, natural light, waist-up",
+    "footnote": "IEBC, Registered Voters per Constituency, 2022 General Election",
+    "statLabel": "registered voters, 2022"
+  },
+  "countdown": {
+    "eyebrow": "Election day",
+    "title": "Tuesday 10 August 2027",
+    "body": "Polls open at 6am. Check your registration with IEBC and plan your day.",
+    "days": "days to go",
+    "calendar": "Add to calendar",
+    "source": "IEBC gazette notice, 14 Sep 2026"
+  },
+  "entries": {
+    "title": "Start here",
+    "who": {
+      "title": "Who is Robert Too",
+      "body": "The man, his roots, his work in Sotik."
+    },
+    "record": {
+      "title": "His record",
+      "body": "What he has done, every item documented."
+    },
+    "next": {
+      "title": "What's next",
+      "body": "Three pledges for 2027–2032."
+    }
+  },
+  "stats": {
+    "eyebrow": "Sotik in numbers",
+    "voters2022": "registered voters, IEBC 2022",
+    "voters2017": "registered voters, 2017",
+    "growth": "more voters in five years",
+    "wards": "wards in Sotik",
+    "toConfirm": "to confirm",
+    "source": "Source",
+    "share": "Share on WhatsApp",
+    "shareText": "Sotik has 86,681 registered voters (IEBC 2022). A new chapter starts with the facts:"
+  },
+  "record": {
+    "eyebrow": "02 · The record",
+    "title": "Documents first.",
+    "body": "Every initiative on the Record page states Robert's exact role and links to its proof. We publish nothing without a document.",
+    "pending": "First entries are being verified with the campaign.",
+    "cta": "See the record"
+  },
+  "map": {
+    "eyebrow": "The map",
+    "title": "Sotik's voters, ward by ward.",
+    "summary": "Kapletundo is the largest ward, with {voters} registered voters, {share} of the constituency.",
+    "cta": "Explore the map",
+    "source": "Ward figures: Mzalendo, citing IEBC 2022 · to confirm",
+    "caption": "Registered voters by ward, 2022"
+  },
+  "plan": {
+    "eyebrow": "03 · The plan · draft",
+    "title": "Three pledges, each from a documented need.",
+    "draft": "Draft",
+    "tea": {
+      "title": "A fair price for tea",
+      "body": "Push for transparent green-leaf pricing and accountable factory boards."
+    },
+    "dairy": {
+      "title": "Dairy that pays",
+      "body": "Milk cooling, improved breeds and disease control, as the county plan identifies."
+    },
+    "women": {
+      "title": "Women's enterprise",
+      "body": "Credit and market access for women's groups across all five wards."
+    },
+    "cta": "Read the full plan"
+  },
+  "cta": {
+    "title": "Write the next chapter with us.",
+    "volunteer": "Volunteer",
+    "whatsapp": "Join the WhatsApp channel"
+  }
 }

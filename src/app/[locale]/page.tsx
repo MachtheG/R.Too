@@ -1,14 +1,25 @@
-import { getTranslations } from "next-intl/server";
+import { locale as rootLocale } from "next/root-params";
+import { HomeHero } from "@/components/home/HomeHero";
+import { CountdownBand } from "@/components/home/CountdownBand";
+import { EntryCards } from "@/components/home/EntryCards";
+import { StatsBand } from "@/components/home/StatsBand";
+import { RecordTeaser } from "@/components/home/RecordTeaser";
+import { MapPreview } from "@/components/home/MapPreview";
+import { PlanTeaser } from "@/components/home/PlanTeaser";
+import { CallToAction } from "@/components/home/CallToAction";
 
-// Phase 5 replaces this with the approved Hero A home page.
 export default async function HomePage() {
-  const t = await getTranslations("home");
+  const locale = await rootLocale();
   return (
-    <section className="mx-auto flex max-w-screen-xl flex-col gap-4 px-4 py-16 md:px-8">
-      <p className="eyebrow text-laterite">{t("eyebrow")}</p>
-      <h1 className="font-display text-5xl leading-none text-tea md:text-8xl dark:text-mist">{t("headline")}</h1>
-      <p className="font-display text-xl text-leaf italic">{t("subline")}</p>
-      <p className="text-muted-foreground">{t("comingSoon")}</p>
-    </section>
+    <>
+      <HomeHero locale={locale} />
+      <CountdownBand />
+      <EntryCards />
+      <StatsBand locale={locale} />
+      <RecordTeaser />
+      <MapPreview locale={locale} />
+      <PlanTeaser />
+      <CallToAction />
+    </>
   );
 }

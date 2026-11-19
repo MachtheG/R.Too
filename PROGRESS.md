@@ -4,7 +4,8 @@
 - [x] Phase 2: Research → docs/RESEARCH-SUMMARY.md, data/sources.ts
 - [x] Phase 3: Creative direction + design canvas (Hero A chosen)
 - [x] Phase 4: Scaffold, design system, layout shell, /styleguide, quality gate, CI
-- [ ] Phase 5: Home (Hero A)
+- [x] Phase 5: Home (Hero A)
+- [ ] Phase 6: Record, Projects, Map, Plan, other tabs, ward pages
 
 ## [[TO CONFIRM]] items
 - The "Hon." title: office, nominating body, year, gazette ref

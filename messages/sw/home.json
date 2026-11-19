@@ -1,7 +1,89 @@
 {
-  "meta": { "title": "Robert Too: Sura Mpya kwa Sotik", "description": "Robert Too kuwa Mbunge wa Eneo Bunge la Sotik, 2027." },
-  "eyebrow": "Eneo Bunge la Sotik · Mbunge · UDA",
-  "headline": "Sura Mpya kwa Sotik.",
-  "subline": "A New Chapter for Sotik.",
-  "comingSoon": "Ukurasa kamili wa nyumbani unakuja katika Awamu ya 5."
+  "meta": {
+    "title": "Robert Too: Sura Mpya kwa Sotik",
+    "description": "Robert Too kuwa Mbunge wa Eneo Bunge la Sotik, 2027. Kila takwimu na chanzo chake."
+  },
+  "hero": {
+    "eyebrow": "Eneo Bunge la Sotik · Mbunge · UDA",
+    "headline": "Sura Mpya kwa Sotik.",
+    "subline": "A New Chapter for Sotik.",
+    "ctaPrimary": "Jiunge na kampeni",
+    "ctaSecondary": "Soma mpango",
+    "photoLabel": "Nafasi ya picha · 4:5",
+    "photoNote": "Robert Too pamoja na wakulima wa chai, mwanga wa asili",
+    "footnote": "IEBC, Wapiga Kura Waliosajiliwa kwa Eneo Bunge, Uchaguzi Mkuu 2022",
+    "statLabel": "wapiga kura waliosajiliwa, 2022"
+  },
+  "countdown": {
+    "eyebrow": "Siku ya uchaguzi",
+    "title": "Jumanne 10 Agosti 2027",
+    "body": "Vituo vya kupigia kura vitafunguliwa saa 12 asubuhi. Hakikisha usajili wako na IEBC.",
+    "days": "siku zimebaki",
+    "calendar": "Ongeza kwenye kalenda",
+    "source": "Tangazo la gazeti la IEBC, 14 Sep 2026"
+  },
+  "entries": {
+    "title": "Anza hapa",
+    "who": {
+      "title": "Robert Too ni nani",
+      "body": "Mtu, asili yake, kazi yake Sotik."
+    },
+    "record": {
+      "title": "Rekodi yake",
+      "body": "Alichofanya, kila jambo na ushahidi wake."
+    },
+    "next": {
+      "title": "Kinachofuata",
+      "body": "Ahadi tatu za 2027–2032."
+    }
+  },
+  "stats": {
+    "eyebrow": "Sotik kwa takwimu",
+    "voters2022": "wapiga kura waliosajiliwa, IEBC 2022",
+    "voters2017": "wapiga kura waliosajiliwa, 2017",
+    "growth": "ongezeko la wapiga kura kwa miaka mitano",
+    "wards": "wadi za Sotik",
+    "toConfirm": "kuthibitishwa",
+    "source": "Chanzo",
+    "share": "Shiriki kwenye WhatsApp",
+    "shareText": "Sotik ina wapiga kura 86,681 waliosajiliwa (IEBC 2022). Sura mpya inaanza na ukweli:"
+  },
+  "record": {
+    "eyebrow": "02 · Rekodi",
+    "title": "Ushahidi kwanza.",
+    "body": "Kila mradi kwenye ukurasa wa Rekodi unaeleza nafasi halisi ya Robert na kuunganisha ushahidi wake. Hatuchapishi chochote bila hati.",
+    "pending": "Rekodi za kwanza zinathibitishwa na kampeni.",
+    "cta": "Tazama rekodi"
+  },
+  "map": {
+    "eyebrow": "Ramani",
+    "title": "Wapiga kura wa Sotik, wadi kwa wadi.",
+    "summary": "Kapletundo ndiyo wadi kubwa zaidi, ikiwa na wapiga kura {voters} waliosajiliwa, {share} ya eneo bunge.",
+    "cta": "Chunguza ramani",
+    "source": "Takwimu za wadi: Mzalendo, ikinukuu IEBC 2022 · kuthibitishwa",
+    "caption": "Wapiga kura waliosajiliwa kwa wadi, 2022"
+  },
+  "plan": {
+    "eyebrow": "03 · Mpango · rasimu",
+    "title": "Ahadi tatu, kila moja kutokana na hitaji lililothibitishwa.",
+    "draft": "Rasimu",
+    "tea": {
+      "title": "Bei ya haki kwa chai",
+      "body": "Kushinikiza uwazi katika bei ya majani mabichi na uwajibikaji wa bodi za viwanda."
+    },
+    "dairy": {
+      "title": "Maziwa yenye faida",
+      "body": "Vipozaji vya maziwa, mifugo bora na udhibiti wa magonjwa, kama ilivyobainishwa na mpango wa kaunti."
+    },
+    "women": {
+      "title": "Biashara za wanawake",
+      "body": "Mikopo na masoko kwa vikundi vya wanawake katika wadi zote tano."
+    },
+    "cta": "Soma mpango kamili"
+  },
+  "cta": {
+    "title": "Andika sura inayofuata pamoja nasi.",
+    "volunteer": "Jitolee",
+    "whatsapp": "Jiunge na chaneli ya WhatsApp"
+  }
 }

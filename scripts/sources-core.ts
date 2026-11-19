@@ -18,7 +18,7 @@ export function validateSources(sources: Source[]): string[] {
 export function findReferencedIds(code: string): string[] {
   const ids: string[] = [];
   for (const m of code.matchAll(/source(?:Id|_ID)\s*[:=]\s*["']([a-z0-9-]+)["']/gi)) ids.push(m[1]);
-  for (const m of code.matchAll(/source(?:Ids|_IDS)\s*[:=]\s*\[([^\]]*)\]/gi)) {
+  for (const m of code.matchAll(/source(?:Ids|_IDS|SourceIds)\s*[:=]\s*\[([^\]]*)\]/gi)) {
     for (const q of m[1].matchAll(/["']([a-z0-9-]+)["']/g)) ids.push(q[1]);
   }
   return ids;
