@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { Container } from "@/components/shared/Container";
 import { GalleryGrid } from "@/components/gallery/GalleryGrid";
-import { tabMetadata } from "@/lib/i18n-helpers";
+import { tabMetadata } from "@/lib/seo";
 import { photos } from "@data/photos";
 
 export const generateMetadata = () => tabMetadata("gallery");

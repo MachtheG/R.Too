@@ -119,6 +119,7 @@
   --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
   --font-mono: var(--font-plex-mono), ui-monospace, monospace;
   --font-heading: var(--font-display);
+  --font-display-italic: var(--font-fraunces-italic), var(--font-fraunces), ui-serif, Georgia, serif;
 
   --radius-sm: var(--radius);
   --radius-md: var(--radius);

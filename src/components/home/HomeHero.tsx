@@ -15,7 +15,7 @@ export async function HomeHero({ locale }: { locale: string }) {
         <h1 className="font-display text-[clamp(2.75rem,8vw,6rem)] leading-[0.98] tracking-tight text-tea dark:text-mist">
           {t("headline")}
         </h1>
-        <p lang="sw" className="font-display text-xl text-leaf italic md:text-2xl dark:text-[#9cc3a6]">{t("subline")}</p>
+        <p lang="sw" className="font-display-italic text-xl text-leaf italic md:text-2xl dark:text-[#9cc3a6]">{t("subline")}</p>
         <div className="mt-2 flex gap-12 border-t border-rule pt-5">
           <p className="flex flex-col gap-1">
             <span className="font-display text-4xl">

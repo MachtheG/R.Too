@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { Container } from "@/components/shared/Container";
-import { tabMetadata } from "@/lib/i18n-helpers";
+import { tabMetadata } from "@/lib/seo";
 import { dataCredits, fontCredits } from "@data/credits";
 import { photos } from "@data/photos";
 

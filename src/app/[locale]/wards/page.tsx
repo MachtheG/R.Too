@@ -3,7 +3,7 @@ import { locale as rootLocale } from "next/root-params";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { Container } from "@/components/shared/Container";
 import { WardCard } from "@/components/wards/WardCard";
-import { tabMetadata } from "@/lib/i18n-helpers";
+import { tabMetadata } from "@/lib/seo";
 import { totalWardVoters, wards } from "@data/wards";
 
 export const generateMetadata = () => tabMetadata("wards");

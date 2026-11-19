@@ -8,6 +8,5 @@
   "email": "Email",
   "phone": "Phone",
   "office": "Campaign office",
-  "pending": "[[TO CONFIRM]]",
-  "formsSoon": "A contact form opens in the next build phase."
+  "pending": "[[TO CONFIRM]]"
 }

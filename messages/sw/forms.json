@@ -1,0 +1,48 @@
+{
+  "name": "Jina kamili",
+  "phone": "Nambari ya simu",
+  "phoneHint": "mf. 0712 345 678",
+  "email": "Barua pepe (si lazima)",
+  "ward": "Wadi yako",
+  "chooseWard": "Chagua wadi yako",
+  "help": "Unaweza kusaidiaje?",
+  "helpOptions": {
+    "canvassing": "Nyumba kwa nyumba",
+    "events": "Matukio",
+    "agent": "Wakala wa kura",
+    "social": "Mitandao ya kijamii",
+    "transport": "Usafiri"
+  },
+  "message": "Ujumbe wako",
+  "consent": "Ninakubali kampeni ya Robert Too ihifadhi taarifa hizi ili {purpose}. Ninaweza kuondoa idhini wakati wowote.",
+  "purpose": {
+    "volunteer": "iwasiliane nami kuhusu kujitolea",
+    "pledge": "irekodi ahadi yangu ya uungaji mkono",
+    "contact": "ijibu ujumbe wangu"
+  },
+  "privacyLink": "Soma jinsi tunavyolinda data yako",
+  "required": "Lazima",
+  "submit": {
+    "volunteer": "Jisajili kujitolea",
+    "pledge": "Ongeza ahadi yangu",
+    "contact": "Tuma ujumbe"
+  },
+  "sending": "Inatuma…",
+  "success": {
+    "volunteer": "Asante. Kampeni itawasiliana nawe kuhusu kujitolea katika wadi yako.",
+    "pledge": "Asante kwa ahadi yako. Pamoja tunaandika sura inayofuata.",
+    "contact": "Asante. Ujumbe wako umetumwa."
+  },
+  "errors": {
+    "name": "Andika jina lako (herufi 2–80).",
+    "phone": "Andika nambari ya simu ya Kenya, mf. 0712 345 678.",
+    "email": "Andika barua pepe sahihi au acha wazi.",
+    "ward": "Chagua wadi yako.",
+    "consent": "Tafadhali weka alama kwenye kisanduku kutoa idhini.",
+    "help": "Chagua angalau njia moja ya kusaidia.",
+    "message": "Andika angalau herufi 10.",
+    "server": "Hitilafu imetokea. Tafadhali jaribu tena, au wasiliana nasi kwenye WhatsApp.",
+    "summary": "Tafadhali rekebisha sehemu zilizoangaziwa."
+  },
+  "honeypot": "Acha sehemu hii wazi"
+}

@@ -1,7 +1,8 @@
 import { getTranslations } from "next-intl/server";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { Container } from "@/components/shared/Container";
-import { tabMetadata } from "@/lib/i18n-helpers";
+import { tabMetadata } from "@/lib/seo";
+import { ContactForm } from "@/components/forms/ContactForm";
 
 export const generateMetadata = () => tabMetadata("contact");
 
@@ -20,7 +21,7 @@ export default async function ContactPage() {
             </div>
           ))}
         </dl>
-        <p className="max-w-xl bg-paper-2 px-4 py-3 font-mono text-xs">{t("formsSoon")}</p>
+        <div className="max-w-xl"><ContactForm /></div>
       </Container>
     </>
   );

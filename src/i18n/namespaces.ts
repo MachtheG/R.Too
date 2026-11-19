@@ -17,5 +17,6 @@ export const namespaces = [
   "privacy",
   "sources",
   "credits",
+  "forms",
 ] as const;
 export type Namespace = (typeof namespaces)[number];

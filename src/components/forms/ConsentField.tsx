@@ -1,0 +1,24 @@
+"use client";
+import type { UseFormRegisterReturn } from "react-hook-form";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import type { FormKind } from "@/lib/forms/schemas";
+import { errorCls } from "./fieldStyles";
+
+/** DPA 2019 consent: unticked by default, purpose stated, link to the privacy notice. */
+export function ConsentField({ kind, reg, error }: { kind: FormKind; reg: UseFormRegisterReturn; error?: string }) {
+  const t = useTranslations("forms");
+  const id = `${kind}-consent`;
+  return (
+    <div className="flex flex-col gap-1.5">
+      <div className="flex items-start gap-3">
+        <input id={id} type="checkbox" {...reg} aria-invalid={Boolean(error)} aria-describedby={error ? `${id}-error` : undefined} className="mt-1 size-5 shrink-0 accent-tea" />
+        <label htmlFor={id} className="text-sm leading-relaxed">
+          {t("consent", { purpose: t(`purpose.${kind}`) })}{" "}
+          <Link href="/privacy" className="underline underline-offset-4">{t("privacyLink")}</Link>
+        </label>
+      </div>
+      {error && <span id={`${id}-error`} role="alert" className={errorCls}>{error}</span>}
+    </div>
+  );
+}

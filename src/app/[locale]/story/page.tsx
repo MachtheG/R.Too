@@ -4,7 +4,7 @@ import { PageHeader } from "@/components/shared/PageHeader";
 import { Container } from "@/components/shared/Container";
 import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
 import { Timeline } from "@/components/record/Timeline";
-import { tabMetadata } from "@/lib/i18n-helpers";
+import { tabMetadata } from "@/lib/seo";
 
 export const generateMetadata = () => tabMetadata("story");
 

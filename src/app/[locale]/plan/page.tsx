@@ -3,7 +3,7 @@ import { PageHeader } from "@/components/shared/PageHeader";
 import { Container } from "@/components/shared/Container";
 import { PledgeArticle } from "@/components/plan/PledgeArticle";
 import { Link } from "@/i18n/navigation";
-import { tabMetadata } from "@/lib/i18n-helpers";
+import { tabMetadata } from "@/lib/seo";
 import { pledges } from "@data/plan";
 
 export const generateMetadata = () => tabMetadata("plan");

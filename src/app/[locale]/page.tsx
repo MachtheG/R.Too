@@ -7,11 +7,13 @@ import { RecordTeaser } from "@/components/home/RecordTeaser";
 import { MapPreview } from "@/components/home/MapPreview";
 import { PlanTeaser } from "@/components/home/PlanTeaser";
 import { CallToAction } from "@/components/home/CallToAction";
+import { PersonJsonLd } from "@/components/home/PersonJsonLd";
 
 export default async function HomePage() {
   const locale = await rootLocale();
   return (
     <>
+      <PersonJsonLd locale={locale} />
       <HomeHero locale={locale} />
       <CountdownBand />
       <EntryCards />

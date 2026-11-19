@@ -4,7 +4,8 @@ import { PageHeader } from "@/components/shared/PageHeader";
 import { Container } from "@/components/shared/Container";
 import { WardMap } from "@/components/map/WardMap";
 import { WardTable } from "@/components/map/WardTable";
-import { numberLocale, tabMetadata } from "@/lib/i18n-helpers";
+import { numberLocale } from "@/lib/i18n-helpers";
+import { tabMetadata } from "@/lib/seo";
 import { totalWardVoters, wards } from "@data/wards";
 import { projects } from "@data/projects";
 

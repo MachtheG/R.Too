@@ -6,7 +6,7 @@ import { Timeline } from "@/components/record/Timeline";
 import { SectorChart } from "@/components/record/SectorChart";
 import { FundsChart } from "@/components/record/FundsChart";
 import { Link } from "@/i18n/navigation";
-import { tabMetadata } from "@/lib/i18n-helpers";
+import { tabMetadata } from "@/lib/seo";
 import { projects } from "@data/projects";
 
 export const generateMetadata = () => tabMetadata("record");

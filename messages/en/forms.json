@@ -1,0 +1,48 @@
+{
+  "name": "Full name",
+  "phone": "Mobile number",
+  "phoneHint": "e.g. 0712 345 678",
+  "email": "Email (optional)",
+  "ward": "Your ward",
+  "chooseWard": "Choose your ward",
+  "help": "How can you help?",
+  "helpOptions": {
+    "canvassing": "Door-to-door",
+    "events": "Events",
+    "agent": "Polling agent",
+    "social": "Social media",
+    "transport": "Transport"
+  },
+  "message": "Your message",
+  "consent": "I agree that the Robert Too campaign may store these details to {purpose}. I can withdraw consent at any time.",
+  "purpose": {
+    "volunteer": "contact me about volunteering",
+    "pledge": "record my pledge of support",
+    "contact": "reply to my message"
+  },
+  "privacyLink": "Read how we protect your data",
+  "required": "Required",
+  "submit": {
+    "volunteer": "Sign up to volunteer",
+    "pledge": "Add my pledge",
+    "contact": "Send message"
+  },
+  "sending": "Sending…",
+  "success": {
+    "volunteer": "Thank you. The campaign will contact you about volunteering in your ward.",
+    "pledge": "Thank you for your pledge. Together we write the next chapter.",
+    "contact": "Thank you. Your message has been sent."
+  },
+  "errors": {
+    "name": "Enter your name (2–80 characters).",
+    "phone": "Enter a Kenyan mobile number, e.g. 0712 345 678.",
+    "email": "Enter a valid email or leave it empty.",
+    "ward": "Choose your ward.",
+    "consent": "Please tick the box to give consent.",
+    "help": "Choose at least one way to help.",
+    "message": "Write at least 10 characters.",
+    "server": "Something went wrong. Please try again, or contact us on WhatsApp.",
+    "summary": "Please fix the highlighted fields."
+  },
+  "honeypot": "Leave this field empty"
+}

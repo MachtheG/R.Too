@@ -3,6 +3,7 @@ import { locale as rootLocale } from "next/root-params";
 import { projects } from "@data/projects";
 import { ProjectDetail } from "@/components/projects/ProjectDetail";
 import { pick } from "@/lib/i18n-helpers";
+import { alternatesFor } from "@/lib/seo";
 
 // Cache Components requires at least one param. While the ledger is empty, a sentinel
 // slug is prerendered and resolves to notFound(). It disappears once a project exists.
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/projects
   const { slug } = await params;
   const p = projects.find((x) => x.slug === slug);
   const locale = await rootLocale();
-  return p ? { title: pick(p.name, locale), description: pick(p.summary, locale) } : {};
+  return p ? { title: pick(p.name, locale), description: pick(p.summary, locale), alternates: alternatesFor(`/projects/${p.slug}`, locale) } : {};
 }
 
 export default async function ProjectPage({ params }: PageProps<"/[locale]/projects/[slug]">) {

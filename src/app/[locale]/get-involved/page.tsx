@@ -1,7 +1,9 @@
 import { getTranslations } from "next-intl/server";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { Container } from "@/components/shared/Container";
-import { tabMetadata } from "@/lib/i18n-helpers";
+import { tabMetadata } from "@/lib/seo";
+import { VolunteerForm } from "@/components/forms/VolunteerForm";
+import { PledgeForm } from "@/components/forms/PledgeForm";
 
 export const generateMetadata = () => tabMetadata("involved");
 
@@ -10,7 +12,7 @@ export default async function GetInvolvedPage() {
   return (
     <>
       <PageHeader eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")} />
-      <Container className="grid gap-8 py-12 md:grid-cols-3">
+      <Container className="grid gap-12 py-12 lg:grid-cols-3">
         <section id="whatsapp" className="flex flex-col gap-3 border-t-2 border-tea pt-4 dark:border-mist">
           <h2 className="font-display text-2xl">{t("whatsapp.title")}</h2>
           <p>{t("whatsapp.body")}</p>
@@ -19,12 +21,12 @@ export default async function GetInvolvedPage() {
         <section id="volunteer" className="flex flex-col gap-3 border-t-2 border-tea pt-4 dark:border-mist">
           <h2 className="font-display text-2xl">{t("volunteer.title")}</h2>
           <p>{t("volunteer.body")}</p>
-          <p className="bg-paper-2 px-3 py-2 font-mono text-xs">{t("formsSoon")}</p>
+          <VolunteerForm />
         </section>
         <section id="pledge" className="flex flex-col gap-3 border-t-2 border-tea pt-4 dark:border-mist">
           <h2 className="font-display text-2xl">{t("pledge.title")}</h2>
           <p>{t("pledge.body")}</p>
-          <p className="bg-paper-2 px-3 py-2 font-mono text-xs">{t("formsSoon")}</p>
+          <PledgeForm />
         </section>
       </Container>
     </>
