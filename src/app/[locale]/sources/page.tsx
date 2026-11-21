@@ -24,7 +24,7 @@ export default async function SourcesPage() {
                   <span className="border border-current px-1.5">{s.verified ? t("verified") : t("unverified")}</span>
                 </p>
               </div>
-              <a href={s.url} target="_blank" rel="noopener noreferrer" className="self-start text-sm underline underline-offset-4">{t("open")} ↗</a>
+              <a href={s.url} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center self-start text-sm underline underline-offset-4">{t("open")} ↗</a>
             </li>
           ))}
         </ol>

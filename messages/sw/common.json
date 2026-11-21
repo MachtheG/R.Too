@@ -1,6 +1,9 @@
 {
   "skipToContent": "Ruka hadi maudhui",
   "candidate": "Robert Too",
+  "lockup": "Mgombea · Eneo Bunge la Sotik",
+  "lockupShort": "Sotik · UDA",
+  "homeLabel": "Robert Too, mgombea wa Eneo Bunge la Sotik: ukurasa wa mwanzo",
   "nav": {
     "label": "Kuu",
     "menu": "Menyu",
@@ -30,7 +33,7 @@
     "short": "EN"
   },
   "footer": {
-    "authorised": "Imeidhinishwa na [[TO CONFIRM: jina la wakala]], kwa niaba ya Robert Too.",
+    "authorised": "Imeandaliwa kwa ajili ya kampeni ya Robert Too. Jina la wakala aliyeidhinisha litaongezwa hapa kabla ya uzinduzi.",
     "demo": "Toleo la majaribio, si tovuti rasmi ya kampeni.",
     "privacy": "Faragha",
     "sources": "Vyanzo",
@@ -40,5 +43,11 @@
   "lite": {
     "off": "Hali nyepesi: imezimwa (kwa mtandao wa polepole)",
     "on": "Hali nyepesi: imewashwa"
-  }
+  },
+  "photo": {
+    "pending": "Picha inakuja",
+    "portrait": "Picha ya mtu",
+    "community": "Jamii"
+  },
+  "toConfirm": "Kuthibitishwa"
 }

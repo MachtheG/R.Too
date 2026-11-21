@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { Container } from "@/components/shared/Container";
 import { tabMetadata } from "@/lib/seo";
+import { Pending } from "@/components/shared/Pending";
 
 export const generateMetadata = () => tabMetadata("privacy");
 
@@ -16,7 +17,7 @@ export default async function PrivacyPage() {
         {sections.map((s) => (
           <section key={s} id={s} className="flex flex-col gap-2">
             <h2 className="font-display text-2xl">{t(`sections.${s}.h`)}</h2>
-            <p className="text-lg leading-relaxed">{t(`sections.${s}.p`)}</p>
+            <p className="text-lg leading-relaxed"><Pending text={t(`sections.${s}.p`)} /></p>
           </section>
         ))}
       </Container>

@@ -1,6 +1,9 @@
 {
   "skipToContent": "Skip to content",
   "candidate": "Robert Too",
+  "lockup": "Candidate · Sotik Constituency",
+  "lockupShort": "Sotik · UDA",
+  "homeLabel": "Robert Too, candidate for Sotik Constituency: home",
   "nav": {
     "label": "Main",
     "menu": "Menu",
@@ -30,7 +33,7 @@
     "short": "SW"
   },
   "footer": {
-    "authorised": "Authorised by [[TO CONFIRM: agent name]], for Robert Too.",
+    "authorised": "Prepared for the Robert Too campaign. The authorising agent will be named here before launch.",
     "demo": "Concept demo, not an official campaign site.",
     "privacy": "Privacy",
     "sources": "Sources",
@@ -40,5 +43,11 @@
   "lite": {
     "off": "Lite mode: off (for slow networks)",
     "on": "Lite mode: on"
-  }
+  },
+  "photo": {
+    "pending": "Photo to come",
+    "portrait": "Portrait",
+    "community": "Community"
+  },
+  "toConfirm": "To confirm"
 }

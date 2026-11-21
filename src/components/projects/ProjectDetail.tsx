@@ -7,6 +7,7 @@ import { photos } from "@data/photos";
 import { numberLocale, pick } from "@/lib/i18n-helpers";
 import { Container } from "@/components/shared/Container";
 import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
+import { PhotoFigure } from "@/components/shared/PhotoFigure";
 
 export async function ProjectDetail({ project: p, locale }: { project: Project; locale: string }) {
   const t = await getTranslations("projects");
@@ -25,7 +26,7 @@ export async function ProjectDetail({ project: p, locale }: { project: Project; 
 
   return (
     <Container className="flex flex-col gap-10 py-10 md:py-16">
-      <Link href="/projects" className="font-mono text-sm underline underline-offset-4">← {t("detail.back")}</Link>
+      <Link href="/projects" className="inline-flex min-h-11 items-center self-start font-mono text-sm underline underline-offset-4">← {t("detail.back")}</Link>
       <header className="flex flex-col gap-4">
         <p className="eyebrow text-laterite">{t(`sector.${p.sector}`)} · {p.year}</p>
         <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-tight text-tea dark:text-mist">{pick(p.name, locale)}</h1>
@@ -43,7 +44,11 @@ export async function ProjectDetail({ project: p, locale }: { project: Project; 
         <h2 className="font-display text-2xl">{t("detail.gallery")}</h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {(gallery.length ? gallery : [null]).map((ph, i) => (
-            <PhotoPlaceholder key={ph?.id ?? i} ratio="3/2" label={ph ? pick(ph.caption, locale) : "Photo · 3:2"} />
+            ph?.file ? (
+              <PhotoFigure key={ph.id} photo={ph} locale={locale} />
+            ) : (
+              <PhotoPlaceholder key={ph?.id ?? i} ratio="3/2" label={ph ? pick(ph.caption, locale) : t("detail.gallery")} />
+            )
           ))}
         </div>
       </section>

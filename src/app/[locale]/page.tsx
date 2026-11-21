@@ -4,6 +4,7 @@ import { CountdownBand } from "@/components/home/CountdownBand";
 import { EntryCards } from "@/components/home/EntryCards";
 import { StatsBand } from "@/components/home/StatsBand";
 import { RecordTeaser } from "@/components/home/RecordTeaser";
+import { LandscapeBand } from "@/components/home/LandscapeBand";
 import { MapPreview } from "@/components/home/MapPreview";
 import { PlanTeaser } from "@/components/home/PlanTeaser";
 import { CallToAction } from "@/components/home/CallToAction";
@@ -19,6 +20,7 @@ export default async function HomePage() {
       <EntryCards />
       <StatsBand locale={locale} />
       <RecordTeaser />
+      <LandscapeBand locale={locale} />
       <MapPreview locale={locale} />
       <PlanTeaser />
       <CallToAction />

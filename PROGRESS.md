@@ -22,6 +22,11 @@
 - Candidacy documentation: UDA nomination or campaign letter (UDA affiliation is shown on the site)
 - Women's-enterprise pledge needs a sourced statistic
 - Things to avoid: the campaign to review the draft promises
+- Header emblem is a PLACEHOLDER "RT" monogram (src/components/layout/BrandMark.tsx). Swap for the official Sotik/Bomet emblem only with written usage rights.
+- Authorising agent's name for the footer line (currently neutral copy: "authorising agent will be named here before launch")
+- Hero portrait + all candidate photos: set file/credit/licence/sourceUrl in data/photos.ts
+- Landscape photo is hotlinked from Wikimedia Commons (CC BY-SA 4.0, Timmbau); self-host it at public/images/landscape/sotik-tea-plantation.jpg
+- Set NEXT_PUBLIC_SITE_URL=https://r-too.vercel.app in Vercel (canonical domain; robert-too-sotik.vercel.app retired)
 
 ## Notes
 - The quality gate (lint, typecheck, tests, build) starts at Phase 4, when the scaffold exists.

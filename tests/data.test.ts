@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { totalWardVoters, wards } from "../data/wards";
-import { stats, VOTERS_2022 } from "../data/stats";
+import { stats, VOTERS_2022, HOME_FOOTNOTES, homeFootnote } from "../data/stats";
 import { pledges } from "../data/plan";
 import { sources } from "../data/sources";
 
@@ -19,6 +19,10 @@ describe("data integrity", () => {
       const src = sources.find((x) => x.id === s.sourceId);
       if (s.verified) expect(src?.primary && src.verified).toBe(true);
     }
+  });
+  it("every home-page footnote is a known source, and every stat has a footnote number", () => {
+    for (const id of HOME_FOOTNOTES) expect(ids.has(id)).toBe(true);
+    for (const s of stats) expect(homeFootnote(s.sourceId)).toBeGreaterThan(0);
   });
   it("growth 2017 to 2022 is 18%", () => {
     expect(stats.find((s) => s.key === "growth")?.value).toBe(18);

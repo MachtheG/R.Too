@@ -48,7 +48,7 @@ export function WardMap({ wards, total, projectCount }: { wards: Ward[]; total: 
           </div>
         )}
         <MapLegend low={t("legendLow")} high={t("legendHigh")} />
-        <label className={`flex items-center gap-2 text-sm ${projectCount ? "" : "opacity-60"}`}>
+        <label className={`flex min-h-11 items-center gap-2 text-sm ${projectCount ? "" : "opacity-60"}`}>
           <input type="checkbox" className="size-5" disabled={!projectCount} checked={overlay} onChange={(e) => setOverlay(e.target.checked)} />
           {t("overlay")}
           {!projectCount && <span className="font-mono text-xs">({t("overlayEmpty")})</span>}

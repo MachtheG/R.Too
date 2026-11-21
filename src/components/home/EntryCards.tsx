@@ -22,7 +22,7 @@ export async function EntryCards() {
                 <span aria-hidden className="font-display text-6xl leading-none font-light text-tea md:text-7xl dark:text-mist">{e.n}</span>
                 <span className="text-xl font-semibold group-hover:text-laterite">{t(`${e.key}.title`)}</span>
                 <span className="text-muted-foreground">{t(`${e.key}.body`)}</span>
-                <PhotoPlaceholder ratio="3/2" label="Photo · 3:2" className="mt-2" />
+                <PhotoPlaceholder ratio="3/2" label={t(`${e.key}.photo`)} className="mt-2" />
               </Link>
             </li>
           ))}

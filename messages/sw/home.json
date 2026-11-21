@@ -9,7 +9,7 @@
     "subline": "A New Chapter for Sotik.",
     "ctaPrimary": "Jiunge na kampeni",
     "ctaSecondary": "Soma mpango",
-    "photoLabel": "Nafasi ya picha · 4:5",
+    "photoLabel": "Picha kuu",
     "photoNote": "Robert Too pamoja na wakulima wa chai, mwanga wa asili",
     "footnote": "IEBC, Wapiga Kura Waliosajiliwa kwa Eneo Bunge, Uchaguzi Mkuu 2022",
     "statLabel": "wapiga kura waliosajiliwa, 2022"
@@ -20,21 +20,27 @@
     "body": "Hakikisha umesajiliwa na IEBC, na upange siku yako.",
     "days": "siku zimebaki",
     "calendar": "Ongeza kwenye kalenda",
-    "source": "Tangazo la umma la IEBC, 14 Sep 2026 (kupitia Capital FM)"
+    "source": "Tangazo la umma la IEBC, 14 Sep 2026 (kupitia Capital FM)",
+    "day": "siku imebaki",
+    "today": "Siku ya Uchaguzi",
+    "dateShort": "10 Ago"
   },
   "entries": {
     "title": "Anza hapa",
     "who": {
       "title": "Robert Too ni nani",
-      "body": "Mtu, asili yake, kazi yake Sotik."
+      "body": "Mtu, asili yake, kazi yake Sotik.",
+      "photo": "Picha yake Sotik"
     },
     "record": {
       "title": "Rekodi yake",
-      "body": "Alichofanya, kila jambo na ushahidi wake."
+      "body": "Alichofanya, kila jambo na ushahidi wake.",
+      "photo": "Kwenye mradi uliothibitishwa"
     },
     "next": {
       "title": "Kinachofuata",
-      "body": "Ahadi tatu za 2027–2032."
+      "body": "Ahadi tatu za 2027–2032.",
+      "photo": "Pamoja na wakulima"
     }
   },
   "stats": {
@@ -53,15 +59,27 @@
     "title": "Ushahidi kwanza.",
     "body": "Kila mradi kwenye ukurasa wa Rekodi unaeleza nafasi halisi ya Robert na kuunganisha ushahidi wake. Hatuchapishi chochote bila hati.",
     "pending": "Rekodi za kwanza zinathibitishwa na kampeni.",
-    "cta": "Tazama rekodi"
+    "cta": "Tazama rekodi",
+    "photoLabel": "Eneo la mradi",
+    "photoNote": "Robert Too kwenye eneo la mradi wa jamii"
+  },
+  "landscape": {
+    "eyebrow": "Sotik",
+    "title": "Nchi ya chai ya Sotik"
   },
   "map": {
-    "eyebrow": "Ramani",
-    "title": "Wapiga kura wa Sotik, wadi kwa wadi.",
-    "summary": "Kapletundo ndiyo wadi kubwa zaidi, ikiwa na wapiga kura {voters} waliosajiliwa, {share} ya eneo bunge.",
-    "cta": "Chunguza ramani",
-    "source": "Takwimu za wadi: Mzalendo, ikinukuu IEBC 2022 · kuthibitishwa",
-    "caption": "Wapiga kura waliosajiliwa kwa wadi, 2022"
+    "eyebrow": "Wadi zetu",
+    "title": "Wadi tano, eneo bunge moja.",
+    "summary": "{ward} ndiyo wadi kubwa zaidi, yenye wapiga kura {voters} waliosajiliwa: {share} ya Sotik.",
+    "caption": "Wapiga kura waliosajiliwa kwa wadi, 2022",
+    "votersHead": "Wapiga kura",
+    "rowLabel": "{ward}: wapiga kura {voters} waliosajiliwa. Fungua ukurasa wa wadi",
+    "total": "Jumla ya Sotik",
+    "sourceLabel": "Chanzo",
+    "source": "Takwimu za wadi: Mzalendo Trust, wasifu wa eneo bunge la Sotik, ikinukuu daftari la IEBC 2022.",
+    "toConfirm": "Zitathibitishwa na daftari la IEBC la ngazi ya wadi.",
+    "cta": "Gundua wadi",
+    "mapCta": "Tazama ramani"
   },
   "plan": {
     "eyebrow": "03 · Mpango · rasimu",

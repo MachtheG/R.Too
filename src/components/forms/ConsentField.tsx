@@ -11,8 +11,11 @@ export function ConsentField({ kind, reg, error }: { kind: FormKind; reg: UseFor
   const id = `${kind}-consent`;
   return (
     <div className="flex flex-col gap-1.5">
-      <div className="flex items-start gap-3">
-        <input id={id} type="checkbox" {...reg} aria-invalid={Boolean(error)} aria-describedby={error ? `${id}-error` : undefined} className="mt-1 size-5 shrink-0 accent-tea" />
+      <div className="flex items-start gap-1">
+        {/* 44px hit area around a 20px box */}
+        <label htmlFor={id} className="-m-3 flex size-11 shrink-0 cursor-pointer items-center justify-center">
+          <input id={id} type="checkbox" {...reg} aria-invalid={Boolean(error)} aria-describedby={error ? `${id}-error` : undefined} className="size-5 accent-tea" />
+        </label>
         <label htmlFor={id} className="text-sm leading-relaxed">
           {t("consent", { purpose: t(`purpose.${kind}`) })}{" "}
           <Link href="/privacy" className="underline underline-offset-4">{t("privacyLink")}</Link>

@@ -9,7 +9,7 @@
     "subline": "Sura Mpya kwa Sotik.",
     "ctaPrimary": "Join the campaign",
     "ctaSecondary": "Read the plan",
-    "photoLabel": "Photo slot · 4:5",
+    "photoLabel": "Hero portrait",
     "photoNote": "Robert Too among tea farmers, natural light, waist-up",
     "footnote": "IEBC, Registered Voters per Constituency, 2022 General Election",
     "statLabel": "registered voters, 2022"
@@ -20,21 +20,27 @@
     "body": "Check that you are registered with IEBC, and plan your day.",
     "days": "days to go",
     "calendar": "Add to calendar",
-    "source": "IEBC public notice, 14 Sep 2026 (reported by Capital FM)"
+    "source": "IEBC public notice, 14 Sep 2026 (reported by Capital FM)",
+    "day": "day to go",
+    "today": "Election day",
+    "dateShort": "10 Aug"
   },
   "entries": {
     "title": "Start here",
     "who": {
       "title": "Who is Robert Too",
-      "body": "The man, his roots, his work in Sotik."
+      "body": "The man, his roots, his work in Sotik.",
+      "photo": "Portrait in Sotik"
     },
     "record": {
       "title": "His record",
-      "body": "What he has done, every item documented."
+      "body": "What he has done, every item documented.",
+      "photo": "At a documented project"
     },
     "next": {
       "title": "What's next",
-      "body": "Three pledges for 2027–2032."
+      "body": "Three pledges for 2027–2032.",
+      "photo": "With farmers"
     }
   },
   "stats": {
@@ -53,15 +59,27 @@
     "title": "Documents first.",
     "body": "Every initiative on the Record page states Robert's exact role and links to its proof. We publish nothing without a document.",
     "pending": "First entries are being verified with the campaign.",
-    "cta": "See the record"
+    "cta": "See the record",
+    "photoLabel": "Project site",
+    "photoNote": "Robert Too at a community project site"
+  },
+  "landscape": {
+    "eyebrow": "Sotik",
+    "title": "Sotik's tea country"
   },
   "map": {
-    "eyebrow": "The map",
-    "title": "Sotik's voters, ward by ward.",
-    "summary": "Kapletundo is the largest ward, with {voters} registered voters, {share} of the constituency.",
-    "cta": "Explore the map",
-    "source": "Ward figures: Mzalendo, citing IEBC 2022 · to confirm",
-    "caption": "Registered voters by ward, 2022"
+    "eyebrow": "Our wards",
+    "title": "Five wards, one constituency.",
+    "summary": "{ward} is the largest ward, with {voters} registered voters: {share} of Sotik.",
+    "caption": "Registered voters by ward, 2022",
+    "votersHead": "Voters",
+    "rowLabel": "{ward}: {voters} registered voters. Open the ward page",
+    "total": "Sotik total",
+    "sourceLabel": "Source",
+    "source": "Ward figures: Mzalendo Trust, Sotik constituency profile, citing the IEBC 2022 register.",
+    "toConfirm": "To confirm against the IEBC ward-level register.",
+    "cta": "Explore the wards",
+    "mapCta": "See the map"
   },
   "plan": {
     "eyebrow": "03 · The plan · draft",

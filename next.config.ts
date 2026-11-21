@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
   partialPrefetching: true,
   // Campaign traffic is mostly first-time visitors on mobile: inline Tailwind CSS to avoid a render-blocking request.
   experimental: { inlineCss: true },
+  // Openly licensed photos served from Wikimedia Commons (credited in data/photos.ts).
+  images: { remotePatterns: [new URL("https://upload.wikimedia.org/wikipedia/commons/**")] },
   turbopack: {
     rules: {
       "*.css": {

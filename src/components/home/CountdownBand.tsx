@@ -13,12 +13,18 @@ export async function CountdownBand() {
           <p className="max-w-md text-muted-foreground">{t("body")}</p>
           <p className="font-mono text-[11px] text-muted-foreground">{t("source")}</p>
         </div>
-        <div className="flex items-end gap-6">
-          <p className="flex flex-col">
-            <DaysLeft className="font-display text-7xl leading-none text-tea md:text-8xl dark:text-mist" />
-            <span className="text-sm text-muted-foreground">{t("days")}</span>
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:gap-6">
+          <p className="flex flex-col" aria-live="polite">
+            <DaysLeft
+              numberClass="font-display text-7xl leading-none text-tea md:text-8xl dark:text-mist"
+              labelClass="text-sm text-muted-foreground"
+              daysLabel={t("days")}
+              dayLabel={t("day")}
+              electionDay={t("today")}
+              fallback={t("dateShort")}
+            />
           </p>
-          <a href="/election-2027.ics" download className="inline-flex min-h-12 items-center border border-tea px-5 font-semibold text-tea hover:bg-tea hover:text-mist dark:border-mist dark:text-mist">
+          <a href="/election-2027.ics" download className="inline-flex min-h-12 items-center justify-center border border-tea px-5 font-semibold text-tea hover:bg-tea hover:text-mist dark:border-mist dark:text-mist">
             {t("calendar")}
           </a>
         </div>

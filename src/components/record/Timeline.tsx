@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { timeline } from "@data/timeline";
 import { pick } from "@/lib/i18n-helpers";
 import { FootnoteMark } from "@/components/shared/FootnoteMark";
+import { Pending } from "@/components/shared/Pending";
 
 export async function Timeline({ locale }: { locale: string }) {
   const t = await getTranslations("record");
@@ -13,7 +14,7 @@ export async function Timeline({ locale }: { locale: string }) {
           <li key={i} className="grid grid-cols-[4.5rem_1fr] gap-4 border-t border-rule py-4">
             <span className="font-mono text-sm text-laterite">{e.year}</span>
             <span>
-              {pick(e.text, locale)}
+              <Pending text={pick(e.text, locale)} />
               {e.sourceIds.map((id, n) => <FootnoteMark key={id} n={n + 1} sourceId={id} label="Source" />)}
             </span>
           </li>

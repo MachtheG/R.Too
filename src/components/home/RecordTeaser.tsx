@@ -13,9 +13,9 @@ export async function RecordTeaser() {
           <h2 id="record-title" className="font-display text-4xl text-tea md:text-5xl dark:text-mist">{t("title")}</h2>
           <p className="max-w-lg text-lg leading-relaxed text-ink-soft dark:text-mist/85">{t("body")}</p>
           <p className="border-l-0 bg-paper-2 px-4 py-3 font-mono text-xs">{t("pending")}</p>
-          <Link href="/record" className="self-start font-semibold underline underline-offset-4 hover:text-laterite">{t("cta")} →</Link>
+          <Link href="/record" className="inline-flex min-h-11 items-center self-start font-semibold underline underline-offset-4 hover:text-laterite">{t("cta")} →</Link>
         </div>
-        <PhotoPlaceholder ratio="16/9" label="Photo · 16:9" note="Robert Too at a community project site" />
+        <PhotoPlaceholder ratio="16/9" label={t("photoLabel")} note={t("photoNote")} />
       </Container>
     </section>
   );

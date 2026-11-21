@@ -7,6 +7,11 @@ export type Stat = {
   verified: boolean;
 };
 
+// Footnote numbering shared by every section of the home page (hero, stats, wards):
+// the number shown is index + 1, so ¹ always means the IEBC 2022 register.
+export const HOME_FOOTNOTES = ["iebc-rov-2022", "iebc-rov-2017", "mzalendo-sotik"] as const;
+export const homeFootnote = (sourceId: string) => HOME_FOOTNOTES.indexOf(sourceId as (typeof HOME_FOOTNOTES)[number]) + 1;
+
 export const VOTERS_2022 = 86681;
 export const VOTERS_2017 = 73314;
 

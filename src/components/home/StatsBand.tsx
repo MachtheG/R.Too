@@ -2,14 +2,14 @@ import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/shared/Container";
 import { FootnoteMark } from "@/components/shared/FootnoteMark";
 import { ToConfirm } from "@/components/shared/ToConfirm";
-import { stats } from "@data/stats";
+import { stats, HOME_FOOTNOTES, homeFootnote } from "@data/stats";
 import { sources } from "@data/sources";
 import { CountUp } from "./CountUp";
 import { WhatsAppShare } from "./WhatsAppShare";
 
 export async function StatsBand({ locale }: { locale: string }) {
   const t = await getTranslations("home.stats");
-  const order = [...new Set(stats.map((s) => s.sourceId))];
+  const order = [...HOME_FOOTNOTES];
 
   return (
     <section aria-labelledby="stats-title" className="bg-tea text-mist">
@@ -18,13 +18,13 @@ export async function StatsBand({ locale }: { locale: string }) {
         <dl className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((s) => (
             <div key={s.key} className="flex flex-col-reverse gap-1 border-t border-mist/25 pt-4">
-              <dt className="text-sm text-[#d8d4ca]">
-                {t(s.key)}
-                {!s.verified && <ToConfirm label={t("toConfirm")} />}
+              <dt className="flex flex-col items-start gap-2 text-sm text-[#d8d4ca]">
+                <span>{t(s.key)}</span>
+                {!s.verified && <ToConfirm label={t("toConfirm")} className="ml-0" />}
               </dt>
-              <dd className="font-display text-5xl md:text-6xl">
+              <dd className="font-display text-5xl tabular-nums md:text-6xl">
                 <CountUp value={s.value} locale={locale} prefix={s.format === "percent" ? "+" : ""} suffix={s.format === "percent" ? "%" : ""} />
-                <span className="text-uda"><FootnoteMark n={order.indexOf(s.sourceId) + 1} sourceId={s.sourceId} label={t("source")} /></span>
+                <span className="text-uda"><FootnoteMark n={homeFootnote(s.sourceId)} sourceId={s.sourceId} label={t("source")} /></span>
               </dd>
             </div>
           ))}

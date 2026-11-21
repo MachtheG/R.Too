@@ -6,6 +6,7 @@ import { numberLocale, pick } from "@/lib/i18n-helpers";
 import { Container } from "@/components/shared/Container";
 import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
 import { ToConfirm } from "@/components/shared/ToConfirm";
+import { Pending } from "@/components/shared/Pending";
 
 export async function WardDetail({ ward, locale }: { ward: Ward; locale: string }) {
   const t = await getTranslations("wards");
@@ -16,7 +17,7 @@ export async function WardDetail({ ward, locale }: { ward: Ward; locale: string 
 
   return (
     <Container className="flex flex-col gap-10 py-10 md:py-16">
-      <Link href="/wards" className="font-mono text-sm underline underline-offset-4">← {t("detail.back")}</Link>
+      <Link href="/wards" className="inline-flex min-h-11 items-center self-start font-mono text-sm underline underline-offset-4">← {t("detail.back")}</Link>
       <div className="grid gap-8 md:grid-cols-2">
         <div className="flex flex-col gap-4">
           <p className="eyebrow text-laterite">{t("detail.rank", { rank })}</p>
@@ -26,11 +27,11 @@ export async function WardDetail({ ward, locale }: { ward: Ward; locale: string 
             <span className="text-muted-foreground">{t("voters")} · {pct.format(ward.voters2022 / totalWardVoters)} {t("share")}</span>
           </p>
         </div>
-        <PhotoPlaceholder ratio="3/2" dark label="Photo · 3:2" note={t("detail.photo", { ward: ward.name })} />
+        <PhotoPlaceholder ratio="3/2" dark label={ward.name} note={t("detail.photo", { ward: ward.name })} />
       </div>
       <section className="flex flex-col gap-3">
         <h2 className="font-display text-3xl">{t("detail.priorities")}</h2>
-        <p className="bg-paper-2 px-4 py-3 font-mono text-xs">{t("detail.prioritiesPending")}</p>
+        <p className="bg-paper-2 px-4 py-3 text-sm"><Pending text={t("detail.prioritiesPending")} /></p>
       </section>
       <section className="flex flex-col gap-3">
         <h2 className="font-display text-3xl">{t("detail.projects")}</h2>

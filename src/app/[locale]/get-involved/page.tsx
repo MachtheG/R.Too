@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { Container } from "@/components/shared/Container";
 import { tabMetadata } from "@/lib/seo";
+import { Pending } from "@/components/shared/Pending";
 import { VolunteerForm } from "@/components/forms/VolunteerForm";
 import { PledgeForm } from "@/components/forms/PledgeForm";
 
@@ -16,7 +17,7 @@ export default async function GetInvolvedPage() {
         <section id="whatsapp" className="flex flex-col gap-3 border-t-2 border-tea pt-4 dark:border-mist">
           <h2 className="font-display text-2xl">{t("whatsapp.title")}</h2>
           <p>{t("whatsapp.body")}</p>
-          <p className="self-start border border-dashed border-laterite px-2 py-1 font-mono text-xs text-laterite">{t("whatsapp.pending")}</p>
+          <p className="text-sm"><Pending text={t("whatsapp.pending")} /></p>
         </section>
         <section id="volunteer" className="flex flex-col gap-3 border-t-2 border-tea pt-4 dark:border-mist">
           <h2 className="font-display text-2xl">{t("volunteer.title")}</h2>
