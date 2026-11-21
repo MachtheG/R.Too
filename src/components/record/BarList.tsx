@@ -1,4 +1,4 @@
-type Row = { label: string; value: number; display: string; tone?: "tea" | "laterite" };
+type Row = { label: string; value: number; display: string; tone?: "tea" | "pine" };
 
 /** Accessible horizontal bar chart: a real list with the values as text; bars are decorative. */
 export function BarList({ rows, caption }: { rows: Row[]; caption: string }) {
@@ -14,7 +14,7 @@ export function BarList({ rows, caption }: { rows: Row[]; caption: string }) {
               <span className="font-mono">{r.display}</span>
             </div>
             <div aria-hidden className="h-2.5 bg-paper-2">
-              <div className={r.tone === "laterite" ? "h-full bg-laterite" : "h-full bg-tea dark:bg-[#9cc3a6]"} style={{ width: `${(r.value / max) * 100}%` }} />
+              <div className={r.tone === "pine" ? "h-full bg-pine" : "h-full bg-tea dark:bg-[#9cc3a6]"} style={{ width: `${(r.value / max) * 100}%` }} />
             </div>
           </li>
         ))}

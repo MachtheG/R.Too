@@ -25,7 +25,7 @@ export function MobileMenu({ items, menuLabel, closeLabel }: Props) {
           <ul className="flex flex-col px-4 py-2">
             {items.map((i) => (
               <li key={i.href} className="border-t border-rule first:border-t-0">
-                <Link href={i.href} onClick={() => setOpen(false)} className="block py-3 font-display text-2xl text-tea dark:text-mist">
+                <Link href={i.href} onClick={() => setOpen(false)} className="block py-3 font-display text-2xl text-ink dark:text-mist">
                   {i.label}
                 </Link>
               </li>

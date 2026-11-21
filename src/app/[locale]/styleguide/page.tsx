@@ -12,7 +12,7 @@ export default async function StyleguidePage() {
   return (
     <div className="mx-auto flex max-w-screen-xl flex-col gap-16 px-4 py-12 md:px-8">
       <header className="flex flex-col gap-3 border-b-2 border-ink pb-6 dark:border-mist">
-        <h1 className="font-display text-5xl text-tea dark:text-mist">{t("title")}</h1>
+        <h1 className="font-display text-5xl text-ink dark:text-mist">{t("title")}</h1>
         <p className="max-w-2xl text-lg text-muted-foreground">{t("intro")}</p>
       </header>
       <ColourSwatches />

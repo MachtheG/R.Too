@@ -17,9 +17,9 @@ export default async function HomePage() {
       <PersonJsonLd locale={locale} />
       <HomeHero locale={locale} />
       <CountdownBand />
-      <EntryCards />
+      <EntryCards locale={locale} />
       <StatsBand locale={locale} />
-      <RecordTeaser />
+      <RecordTeaser locale={locale} />
       <LandscapeBand locale={locale} />
       <MapPreview locale={locale} />
       <PlanTeaser />

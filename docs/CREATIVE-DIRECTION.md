@@ -10,17 +10,21 @@ The site is laid out like a broadsheet data desk reporting on its own constituen
 4. **The five wards.** A simplified five-ward glyph of Sotik works as a logo mark, the map, and the navigation for the ward pages.
 
 ## Palette
+Revised 2026-11-22 at the client's request: **white base, black text, yellow accents, green secondary.**
+
 | Token | Hex | Use |
 |---|---|---|
-| `--tea` | #1F3D2B | Primary: headings, hero overlay, footer |
-| `--leaf` | #3E6B4A | Secondary: chart series, links |
-| `--laterite` | #A4472C | Data emphasis: highlighted bars, map high values |
-| `--mist` | #F4F1EA | Page background (paper) |
-| `--ink` | #16181A | Body text |
-| `--rule` | #D6D0C2 | Hairlines and grid |
-| `--uda` | #F2C200 | **Accent only**: countdown pill, primary CTA, one highlight per screen |
+| `--mist` | #FFFFFF | Page background (main white); text on green/black |
+| `--ink` | #0A0A0A | All headings and body text |
+| `--uda` | #FFCC00 | **Accent**: primary buttons, countdown pill, selected ward, header/footer rule, chips. Always with black text on it |
+| `--tea` | #14532D | **Secondary green**: stats/CTA bands, ward panels, outline buttons |
+| `--leaf` | #1E6B3A | Green text on white (Swahili subline) |
+| `--pine` | #1A6634 | Green accent text: eyebrows, hovers, focus ring (was `--laterite`) |
+| `--paper-2` | #F4F5F1 | Soft panels |
+| `--rule` | #E2E3DC | Hairlines and grid |
+| `--night` | #0A0A0A | Footer |
 
-Dark mode inverts to tea-black paper (#0F1A13) with mist text. Contrast reaches AA or better, and yellow never carries text without ink on top.
+Map: sequential green ramp by registered voters; selected ward in yellow. The OS dark-mode preference is not followed (the brief is a white site); an explicit `data-theme="dark"` theme remains. Contrast is AA or better everywhere, and yellow is never used as text on white.
 
 ## Type
 - **Display:** Fraunces (variable serif with optical sizing) for headlines and numerals.

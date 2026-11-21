@@ -25,7 +25,7 @@ export default async function QaPage() {
           <details key={i.key} className="group border-b border-rule py-5">
             <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 font-display text-xl md:text-2xl">
               {t(`items.${i.key}.q`)}
-              <span aria-hidden className="font-mono text-laterite group-open:rotate-45 motion-safe:transition-transform">+</span>
+              <span aria-hidden className="font-mono text-pine group-open:rotate-45 motion-safe:transition-transform">+</span>
             </summary>
             <p className="max-w-2xl pt-3 text-lg leading-relaxed">
               <Pending text={t(`items.${i.key}.a`)} />

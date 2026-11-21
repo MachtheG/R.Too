@@ -27,7 +27,7 @@ export default async function RecordPage() {
         </div>
       </Container>
       <Container className="pb-16">
-        <Link href="/projects" className="inline-flex min-h-12 items-center bg-tea px-6 font-semibold text-mist hover:bg-leaf dark:bg-mist dark:text-night">
+        <Link href="/projects" className="inline-flex min-h-12 items-center bg-uda px-6 font-semibold text-ink hover:bg-ink hover:text-white">
           {t("ledgerCta")} →
         </Link>
       </Container>

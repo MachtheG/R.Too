@@ -10,7 +10,7 @@ export async function FundsChart({ locale }: { locale: string }) {
   const fmt = new Intl.NumberFormat(numberLocale(locale), { notation: "compact" });
   const rows = fundsByYear(projects).flatMap((r) => [
     { label: `${r.year} · ${t("approved")}`, value: r.approved, display: `KSh ${fmt.format(r.approved)}`, tone: "tea" as const },
-    { label: `${r.year} · ${t("spent")}`, value: r.spent, display: `KSh ${fmt.format(r.spent)}`, tone: "laterite" as const },
+    { label: `${r.year} · ${t("spent")}`, value: r.spent, display: `KSh ${fmt.format(r.spent)}`, tone: "pine" as const },
   ]);
 
   return (

@@ -1,14 +1,15 @@
 import { getTranslations } from "next-intl/server";
 import { SectionTitle } from "./SectionTitle";
 
+// Keep in sync with :root in src/app/globals.css.
 const swatches = [
-  { name: "tea", hex: "#1F3D2B", cls: "bg-tea", text: "text-mist" },
-  { name: "leaf", hex: "#3E6B4A", cls: "bg-leaf", text: "text-mist" },
-  { name: "laterite", hex: "#A4472C", cls: "bg-laterite", text: "text-mist" },
-  { name: "mist", hex: "#F4F1EA", cls: "bg-mist", text: "text-ink" },
-  { name: "ink", hex: "#16181A", cls: "bg-ink", text: "text-mist" },
-  { name: "rule", hex: "#D6D0C2", cls: "bg-rule", text: "text-ink" },
-  { name: "uda (accent)", hex: "#F2C200", cls: "bg-uda", text: "text-ink" },
+  { name: "white (mist)", hex: "#FFFFFF", cls: "bg-mist ring-1 ring-rule ring-inset", text: "text-ink" },
+  { name: "ink (text)", hex: "#0A0A0A", cls: "bg-ink", text: "text-mist" },
+  { name: "uda (accent)", hex: "#FFCC00", cls: "bg-uda", text: "text-ink" },
+  { name: "tea (secondary)", hex: "#14532D", cls: "bg-tea", text: "text-mist" },
+  { name: "pine (green text)", hex: "#1A6634", cls: "bg-pine", text: "text-mist" },
+  { name: "paper-2", hex: "#F4F5F1", cls: "bg-paper-2", text: "text-ink" },
+  { name: "rule", hex: "#E2E3DC", cls: "bg-rule", text: "text-ink" },
 ] as const;
 
 export async function ColourSwatches() {

@@ -22,7 +22,10 @@
 - Candidacy documentation: UDA nomination or campaign letter (UDA affiliation is shown on the site)
 - Women's-enterprise pledge needs a sourced statistic
 - Things to avoid: the campaign to review the draft promises
-- Header emblem is a PLACEHOLDER "RT" monogram (src/components/layout/BrandMark.tsx). Swap for the official Sotik/Bomet emblem only with written usage rights.
+- Header emblem is the Bomet County coat of arms (Commons, public domain but tagged "insignia"). Get written clearance from Bomet County Government before launch: official insignia on a candidate's site can read as county endorsement.
+- SAMPLE IMAGES: every photo marked "Sample image" is a Commons stand-in (Bomet/Kenya scenes, none of Robert Too; people shown have not endorsed him). Replace all before public launch. Currently served from Wikimedia's CDN; save local copies under public/images/ when the network isn't rate-limited.
+- Ward draft plans (data/wardPlans.ts) are written by the site team, not the candidate: campaign to approve, then test at ward forums.
+- Ward map geometry: IEBC boundaries via HDX "Kenya Elections" (GeoJSON MIT). Confirm the HDX dataset licence. Ward areas sum to ~485 km² vs 544 km² cited (KNBS), both to confirm.
 - Authorising agent's name for the footer line (currently neutral copy: "authorising agent will be named here before launch")
 - Hero portrait + all candidate photos: set file/credit/licence/sourceUrl in data/photos.ts
 - Landscape photo is hotlinked from Wikimedia Commons (CC BY-SA 4.0, Timmbau); self-host it at public/images/landscape/sotik-tea-plantation.jpg

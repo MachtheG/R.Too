@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { Container } from "@/components/shared/Container";
 import { tabMetadata } from "@/lib/seo";
-import { dataCredits, fontCredits } from "@data/credits";
+import { brandCredits, dataCredits, fontCredits, mapCredits } from "@data/credits";
 import { photos } from "@data/photos";
 
 export const generateMetadata = () => tabMetadata("credits");
@@ -35,6 +35,8 @@ export default async function CreditsPage() {
             <p className="text-muted-foreground">{t("photosEmpty")}</p>
           )}
         </section>
+        <section className="flex flex-col gap-3"><h2 className="font-display text-2xl">{t("brand")}</h2><List items={brandCredits} licence={t("licence")} /></section>
+        <section className="flex flex-col gap-3"><h2 className="font-display text-2xl">{t("map")}</h2><List items={mapCredits} licence={t("licence")} /></section>
         <section className="flex flex-col gap-3"><h2 className="font-display text-2xl">{t("data")}</h2><List items={dataCredits} licence={t("licence")} /></section>
         <section className="flex flex-col gap-3"><h2 className="font-display text-2xl">{t("fonts")}</h2><List items={fontCredits} licence={t("licence")} /></section>
       </Container>

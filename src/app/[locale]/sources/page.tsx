@@ -15,7 +15,7 @@ export default async function SourcesPage() {
         <ol className="flex flex-col">
           {sources.map((s, i) => (
             <li key={s.id} id={s.id} className="grid scroll-mt-24 gap-2 border-b border-rule py-5 target:bg-uda/20 md:grid-cols-[3rem_1fr_auto] md:gap-6">
-              <span className="font-mono text-sm text-laterite">{i + 1}</span>
+              <span className="font-mono text-sm text-pine">{i + 1}</span>
               <div className="flex flex-col gap-1">
                 <p className="font-semibold">{s.title}</p>
                 <p className="text-sm text-muted-foreground">{s.publisher} · {s.date}</p>

@@ -28,10 +28,15 @@ test("projects filters live in the URL", async ({ page }) => {
   await expect(page).toHaveURL(/\?sector=water/);
 });
 
-test("map: selecting a ward updates the panel", async ({ page }) => {
+test("map: selecting a ward (map shape or list) updates the panel and shows its draft plan", async ({ page }) => {
   await page.goto("/en/map");
-  await page.getByRole("button", { name: /Rongena/ }).click();
-  await expect(page.locator("aside")).toContainText("12,034");
+  await page.locator("svg path[role=button][aria-label^='Rongena']").click();
+  const panel = page.locator("article[aria-live]");
+  await expect(panel).toContainText("Rongena/Manaret");
+  await expect(panel).toContainText("12,034");
+  await expect(panel).toContainText("Draft");
+  await page.getByRole("button", { name: /^Kipsonoi/ }).click();
+  await expect(panel).toContainText("Kipsonoi");
 });
 
 test("SEO: hreflang, OG image, sitemap, JSON-LD", async ({ page, request }) => {

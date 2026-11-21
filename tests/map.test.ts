@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { shadeFor } from "@/components/map/wardShades";
+import { shadeFor, SELECTED } from "@/components/map/wardShades";
+import { wards } from "../data/wards";
+import { shapeFor } from "../data/sotikMap";
+import { planFor } from "../data/wardPlans";
 
 const lum = (h: string) => {
   const c = [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16) / 255).map((x) => (x <= 0.03928 ? x / 12.92 : ((x + 0.055) / 1.055) ** 2.4));
@@ -15,6 +18,15 @@ describe("map shading", () => {
     }
   });
   it("largest ward gets the darkest step", () => {
-    expect(shadeFor(21000, 12000, 21000).fill).toBe("#a4472c");
+    expect(shadeFor(21000, 12000, 21000).fill).toBe("#1d6b38");
+  });
+  it("selected (yellow) ward label meets AA", () => {
+    expect(ratio(SELECTED.fill, SELECTED.text)).toBeGreaterThanOrEqual(4.5);
+  });
+  it("every ward has IEBC geometry and a draft plan", () => {
+    for (const w of wards) {
+      expect(shapeFor(w.slug)?.path.startsWith("M")).toBe(true);
+      expect(planFor(w.slug)?.draft).toBe(true);
+    }
   });
 });

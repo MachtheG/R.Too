@@ -28,8 +28,8 @@ export async function ProjectDetail({ project: p, locale }: { project: Project; 
     <Container className="flex flex-col gap-10 py-10 md:py-16">
       <Link href="/projects" className="inline-flex min-h-11 items-center self-start font-mono text-sm underline underline-offset-4">← {t("detail.back")}</Link>
       <header className="flex flex-col gap-4">
-        <p className="eyebrow text-laterite">{t(`sector.${p.sector}`)} · {p.year}</p>
-        <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-tight text-tea dark:text-mist">{pick(p.name, locale)}</h1>
+        <p className="eyebrow text-pine">{t(`sector.${p.sector}`)} · {p.year}</p>
+        <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-tight text-ink dark:text-mist">{pick(p.name, locale)}</h1>
         <p className="max-w-2xl text-lg">{pick(p.summary, locale)}</p>
       </header>
       <dl className="grid gap-px border border-rule bg-rule sm:grid-cols-2 lg:grid-cols-4">
@@ -44,10 +44,10 @@ export async function ProjectDetail({ project: p, locale }: { project: Project; 
         <h2 className="font-display text-2xl">{t("detail.gallery")}</h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {(gallery.length ? gallery : [null]).map((ph, i) => (
-            ph?.file ? (
+            ph ? (
               <PhotoFigure key={ph.id} photo={ph} locale={locale} />
             ) : (
-              <PhotoPlaceholder key={ph?.id ?? i} ratio="3/2" label={ph ? pick(ph.caption, locale) : t("detail.gallery")} />
+              <PhotoPlaceholder key={i} ratio="3/2" label={t("detail.gallery")} />
             )
           ))}
         </div>

@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
 import { FootnoteMark } from "@/components/shared/FootnoteMark";
-import { PhotoCredit } from "@/components/shared/PhotoFigure";
+import { PhotoCredit, SampleChip } from "@/components/shared/CampaignPhoto";
 import { VOTERS_2022, homeFootnote } from "@data/stats";
 import { photoById, photoSrc } from "@data/photos";
 import { pick } from "@/lib/i18n-helpers";
@@ -18,8 +18,8 @@ export async function HomeHero({ locale }: { locale: string }) {
   return (
     <section className="grid border-b border-rule lg:grid-cols-12">
       <div className="order-2 flex flex-col justify-center gap-5 px-4 py-10 md:px-8 lg:order-1 lg:col-span-7 lg:py-20 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))]">
-        <p className="eyebrow text-laterite">{t("eyebrow")}</p>
-        <h1 className="font-display text-[clamp(2.75rem,8vw,6rem)] leading-[0.98] tracking-tight text-tea dark:text-mist">
+        <p className="eyebrow text-pine">{t("eyebrow")}</p>
+        <h1 className="font-display text-[clamp(2.75rem,8vw,6rem)] leading-[0.98] tracking-tight text-ink dark:text-mist">
           {t("headline")}
         </h1>
         <p lang="sw" className="font-display-italic text-xl text-leaf italic md:text-2xl dark:text-[#9cc3a6]">{t("subline")}</p>
@@ -33,10 +33,10 @@ export async function HomeHero({ locale }: { locale: string }) {
           </p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">
-          <Link href="/get-involved" className="inline-flex min-h-12 items-center justify-center bg-tea px-6 font-semibold text-mist hover:bg-leaf dark:bg-mist dark:text-night">
+          <Link href="/get-involved" className="inline-flex min-h-12 items-center justify-center bg-uda px-6 font-semibold text-ink hover:bg-ink hover:text-white">
             {t("ctaPrimary")}
           </Link>
-          <Link href="/plan" className="inline-flex min-h-12 items-center justify-center border border-tea px-6 font-semibold text-tea hover:bg-paper-2 dark:border-mist dark:text-mist">
+          <Link href="/plan" className="inline-flex min-h-12 items-center justify-center border-2 border-tea px-6 font-semibold text-ink hover:bg-tea hover:text-white dark:border-mist dark:text-mist">
             {t("ctaSecondary")}
           </Link>
         </div>
@@ -45,8 +45,9 @@ export async function HomeHero({ locale }: { locale: string }) {
       <div className="order-1 lg:order-2 lg:col-span-5">
         {portrait && portraitSrc ? (
           <figure className="relative h-full w-full">
-            <div className="relative aspect-[4/3] h-full w-full sm:aspect-[3/2] lg:aspect-auto">
+            <div className="tea-rows relative aspect-[4/3] h-full w-full sm:aspect-[3/2] lg:aspect-auto lg:min-h-[560px]">
               <Image src={portraitSrc} alt={pick(portrait.alt, locale)} fill priority sizes="(min-width: 1024px) 42vw, 100vw" className="object-cover object-[50%_25%]" />
+              {portrait.sample && <SampleChip />}
             </div>
             {portrait.credit && (
               <figcaption className="absolute right-0 bottom-0 bg-night/75 px-2 py-1">

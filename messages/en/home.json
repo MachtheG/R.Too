@@ -79,7 +79,8 @@
     "source": "Ward figures: Mzalendo Trust, Sotik constituency profile, citing the IEBC 2022 register.",
     "toConfirm": "To confirm against the IEBC ward-level register.",
     "cta": "Explore the wards",
-    "mapCta": "See the map"
+    "mapCta": "See the map",
+    "mapSource": "Ward boundaries: IEBC, via HDX \"Kenya Elections\" (simplified)."
   },
   "plan": {
     "eyebrow": "03 · The plan · draft",

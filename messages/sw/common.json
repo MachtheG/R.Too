@@ -47,7 +47,9 @@
   "photo": {
     "pending": "Picha inakuja",
     "portrait": "Picha ya mtu",
-    "community": "Jamii"
+    "community": "Jamii",
+    "sample": "Picha ya mfano"
   },
-  "toConfirm": "Kuthibitishwa"
+  "toConfirm": "Kuthibitishwa",
+  "coatOfArms": "Nembo ya Kaunti ya Bomet"
 }

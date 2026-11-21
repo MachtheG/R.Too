@@ -47,7 +47,9 @@
   "photo": {
     "pending": "Photo to come",
     "portrait": "Portrait",
-    "community": "Community"
+    "community": "Community",
+    "sample": "Sample image"
   },
-  "toConfirm": "To confirm"
+  "toConfirm": "To confirm",
+  "coatOfArms": "Coat of arms of Bomet County"
 }

@@ -4,18 +4,20 @@
 
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-/* Campaign tokens: see docs/CREATIVE-DIRECTION.md */
+/* Campaign tokens: see docs/CREATIVE-DIRECTION.md
+   Scheme: white base, black text, UDA yellow accent, green secondary.
+   Yellow is a FILL colour (buttons, highlights, chips) with black text on it; never yellow text on white. */
 :root {
-  --tea: #1f3d2b;
-  --leaf: #3e6b4a;
-  --laterite: #a4472c;
-  --mist: #f4f1ea;
-  --paper-2: #e9e4d8;
-  --ink: #16181a;
-  --ink-soft: #3a3d40;
-  --rule: #d6d0c2;
-  --uda: #f2c200;
-  --night: #0f1a13;
+  --tea: #14532d;      /* green (secondary): bands, panels, outlines. White text on it: 9.9:1 */
+  --leaf: #1e6b3a;     /* green for text on white (6.6:1) and hovers */
+  --pine: #1a6634;     /* green accent text: eyebrows, links on hover, focus ring (6.9:1 on white) */
+  --mist: #ffffff;     /* main white; also text on green/black */
+  --paper-2: #f4f5f1;  /* soft panel grey */
+  --ink: #0a0a0a;      /* text black */
+  --ink-soft: #2f2f2f;
+  --rule: #e2e3dc;
+  --uda: #ffcc00;      /* UDA yellow accent (black text on it: 13:1) */
+  --night: #0a0a0a;    /* footer black */
 
   /* shadcn mapping */
   --background: var(--mist);
@@ -29,56 +31,37 @@
   --secondary: var(--paper-2);
   --secondary-foreground: var(--ink);
   --muted: var(--paper-2);
-  --muted-foreground: #4a4d50;
+  --muted-foreground: #4d4d4d;
   --accent: var(--uda);
   --accent-foreground: var(--ink);
   --destructive: #b3261e;
   --border: var(--rule);
   --input: var(--rule);
-  --ring: var(--laterite);
+  --ring: var(--pine);
   --chart-1: var(--tea);
-  --chart-2: var(--laterite);
+  --chart-2: var(--pine);
   --chart-3: var(--leaf);
   --chart-4: #c88a72;
   --chart-5: var(--uda);
   --radius: 0.125rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --background: var(--night);
-    --foreground: var(--mist);
-    --card: #16261c;
-    --card-foreground: var(--mist);
-    --popover: #16261c;
-    --popover-foreground: var(--mist);
-    --primary: var(--mist);
-    --primary-foreground: var(--night);
-    --secondary: #1c2f23;
-    --secondary-foreground: var(--mist);
-    --muted: #1c2f23;
-    --muted-foreground: #b9b4a8;
-    --border: #2c4234;
-    --input: #2c4234;
-    --rule: #2c4234;
-    --paper-2: #1c2f23;
-    --laterite: #e08a6b;
-  }
-}
+/* The brief is a white site, so the OS dark-mode preference is deliberately NOT followed.
+   An explicit dark theme remains available via <html data-theme="dark">. */
 :root[data-theme="dark"] {
   --background: var(--night);
   --foreground: var(--mist);
-  --card: #16261c;
+  --card: #141414;
   --card-foreground: var(--mist);
   --primary: var(--mist);
   --primary-foreground: var(--night);
-  --secondary: #1c2f23;
-  --muted: #1c2f23;
-  --muted-foreground: #b9b4a8;
-  --border: #2c4234;
-  --rule: #2c4234;
-  --paper-2: #1c2f23;
-  --laterite: #e08a6b;
+  --secondary: #1a1a1a;
+  --muted: #1a1a1a;
+  --muted-foreground: #b5b5b5;
+  --border: #333333;
+  --rule: #333333;
+  --paper-2: #161616;
+  --pine: #6fcf8f;
 }
 
 @theme inline {
@@ -108,7 +91,7 @@
 
   --color-tea: var(--tea);
   --color-leaf: var(--leaf);
-  --color-laterite: var(--laterite);
+  --color-pine: var(--pine);
   --color-mist: var(--mist);
   --color-paper-2: var(--paper-2);
   --color-ink: var(--ink);
@@ -142,17 +125,17 @@
     font-feature-settings: "tnum" 1;
   }
   :focus-visible {
-    outline: 2px solid var(--laterite);
+    outline: 2px solid var(--pine);
     outline-offset: 2px;
   }
-  /* On dark surfaces laterite drops below 3:1; use UDA yellow (7:1+) for the focus ring. */
+  /* On dark surfaces pine drops below 3:1; use UDA yellow (7:1+) for the focus ring. */
   .bg-tea :focus-visible, .bg-night :focus-visible, footer :focus-visible, .bg-ink :focus-visible {
     outline-color: var(--uda);
   }
 }
 
 @utility tea-rows {
-  background-image: repeating-linear-gradient(-32deg, var(--tea) 0 2px, #2a4d37 2px 14px);
+  background-image: repeating-linear-gradient(-32deg, var(--tea) 0 2px, #1b6338 2px 14px);
 }
 @utility tea-rows-light {
   background-image: repeating-linear-gradient(-32deg, var(--paper-2) 0 1px, transparent 1px 10px);

@@ -15,6 +15,16 @@ export type Source = {
 
 export const sources: Source[] = [
   {
+    id: "iebc-ward-boundaries",
+    title: "Kenya Elections: IEBC ward and constituency boundaries",
+    publisher: "IEBC via Humanitarian Data Exchange (HDX)",
+    date: "2026-11-22",
+    url: "https://data.humdata.org/dataset/kenya-elections",
+    primary: false,
+    verified: false,
+    note: "GeoJSON from github.com/tigawanna/kenya_wards_geojson_data (MIT). Sotik ward codes 966–970. Simplified for display; areas approximate. HDX dataset licence to confirm.",
+  },
+  {
     id: "iebc-rov-2022",
     title: "Registered Voters per Constituency for the 2022 General Election",
     publisher: "IEBC",
