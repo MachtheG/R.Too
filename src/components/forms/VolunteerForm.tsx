@@ -18,7 +18,7 @@ export function VolunteerForm() {
         <div className="flex flex-wrap gap-x-5 gap-y-2">
           {helpOptions.map((o) => (
             <label key={o} className="flex min-h-11 items-center gap-2 text-sm">
-              <input type="checkbox" value={o} className="size-5 accent-tea" {...form.register("help")} />
+              <input type="checkbox" value={o} className="size-5 accent-primary" {...form.register("help")} />
               {t(`helpOptions.${o}`)}
             </label>
           ))}

@@ -1,9 +1,9 @@
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
-type Props = { ratio: "4/5" | "16/9" | "1/1" | "3/2"; label: string; note?: string; dark?: boolean; className?: string };
+type Props = { ratio: "4/5" | "16/9" | "1/1" | "3/2" | "2/3"; label: string; note?: string; dark?: boolean; className?: string };
 
-const ratios = { "4/5": "aspect-[4/5]", "16/9": "aspect-video", "1/1": "aspect-square", "3/2": "aspect-[3/2]" } as const;
+const ratios = { "4/5": "aspect-[4/5]", "16/9": "aspect-video", "1/1": "aspect-square", "3/2": "aspect-[3/2]", "2/3": "aspect-[2/3]" } as const;
 
 /**
  * Deliberate, labelled gap for a photo that has not been supplied yet.
@@ -19,15 +19,15 @@ export function PhotoPlaceholder({ ratio, label, note, dark = false, className }
       data-placeholder="photo"
       className={cn(
         ratios[ratio],
-        "relative flex flex-col justify-between gap-3 border border-dashed p-4",
-        dark ? "tea-rows border-mist/40 text-mist" : "tea-rows-light border-ink-soft/40 text-ink-soft dark:border-mist/40 dark:text-mist",
+        "relative flex flex-col justify-between gap-3 rounded-lg border border-dashed p-4",
+        dark ? "tea-rows border-paper/40 text-paper" : "tea-rows-light border-muted-foreground/40 text-muted-foreground dark:border-paper/40 dark:text-paper",
         className,
       )}
     >
       <span
         className={cn(
-          "inline-flex items-center gap-1.5 self-start px-2 py-1 font-mono text-[10px] tracking-wider uppercase",
-          dark ? "bg-mist text-night" : "bg-ink text-mist dark:bg-mist dark:text-night",
+          "inline-flex items-center gap-1.5 self-start px-2 py-1 tabular-nums text-[10px] tracking-wider uppercase",
+          dark ? "bg-paper text-ink" : "bg-ink text-paper dark:bg-paper dark:text-ink",
         )}
       >
         <svg viewBox="0 0 16 16" aria-hidden="true" className="size-3 fill-current">

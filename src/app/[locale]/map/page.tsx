@@ -24,7 +24,7 @@ export default async function MapPage() {
         <SotikMap wards={wards} total={totalWardVoters} headingLevel="h2" />
         <p className="font-display text-xl md:text-2xl">{t("summary", { share: pct.format(topTwo / totalWardVoters) })}<ToConfirm label={t("toConfirm")} /></p>
         <WardTable wards={wards} total={totalWardVoters} locale={locale} />
-        <p className="font-mono text-[11px] text-muted-foreground">{t("source")}</p>
+        <p className="tabular-nums text-[11px] text-muted-foreground">{t("source")}</p>
       </Container>
     </>
   );

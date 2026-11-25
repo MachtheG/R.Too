@@ -26,10 +26,10 @@ export async function ProjectDetail({ project: p, locale }: { project: Project; 
 
   return (
     <Container className="flex flex-col gap-10 py-10 md:py-16">
-      <Link href="/projects" className="inline-flex min-h-11 items-center self-start font-mono text-sm underline underline-offset-4">← {t("detail.back")}</Link>
+      <Link href="/projects" className="inline-flex min-h-11 items-center self-start tabular-nums text-sm underline underline-offset-4">← {t("detail.back")}</Link>
       <header className="flex flex-col gap-4">
-        <p className="eyebrow text-pine">{t(`sector.${p.sector}`)} · {p.year}</p>
-        <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-tight text-ink dark:text-mist">{pick(p.name, locale)}</h1>
+        <p className="kicker">{t(`sector.${p.sector}`)} · {p.year}</p>
+        <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-tight text-ink dark:text-paper">{pick(p.name, locale)}</h1>
         <p className="max-w-2xl text-lg">{pick(p.summary, locale)}</p>
       </header>
       <dl className="grid gap-px border border-rule bg-rule sm:grid-cols-2 lg:grid-cols-4">

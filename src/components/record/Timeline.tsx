@@ -12,7 +12,7 @@ export async function Timeline({ locale }: { locale: string }) {
       <ol className="flex flex-col">
         {timeline.map((e, i) => (
           <li key={i} className="grid grid-cols-[4.5rem_1fr] gap-4 border-t border-rule py-4">
-            <span className="font-mono text-sm text-pine">{e.year}</span>
+            <span className="tabular-nums text-sm text-primary">{e.year}</span>
             <span>
               <Pending text={pick(e.text, locale)} />
               {e.sourceIds.map((id, n) => <FootnoteMark key={id} n={n + 1} sourceId={id} label="Source" />)}

@@ -15,12 +15,13 @@ export function CountdownPill() {
     <a
       href="/election-2027.ics"
       aria-label={`${t("label")}. ${t("addToCalendar")}`}
-      className="inline-flex min-h-11 shrink-0 items-center rounded-full bg-uda px-3 font-mono text-[11px] tracking-wider whitespace-nowrap text-ink uppercase md:px-4 md:text-xs"
+      className="inline-flex min-h-11 shrink-0 items-center gap-2 text-xs font-semibold tracking-[0.1em] whitespace-nowrap uppercase tabular-nums hover:underline"
     >
       {now ? (
         <>
+          <span aria-hidden className="size-2 rounded-full bg-accent" />
           <span>{t("days", { count: daysUntilElection(now) })}</span>
-          <span className="ml-2 hidden md:inline">· {t("date")}</span>
+          <span className="hidden text-paper/80 md:inline">· {t("date")}</span>
         </>
       ) : (
         <span>{t("date")}</span>

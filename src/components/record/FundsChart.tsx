@@ -16,7 +16,7 @@ export async function FundsChart({ locale }: { locale: string }) {
   return (
     <section aria-labelledby="funds-title" className="flex flex-col gap-4">
       <h2 id="funds-title" className="font-display text-3xl">{t("byYear")}</h2>
-      {rows.length ? <BarList rows={rows} caption={t("byYear")} /> : <p className="bg-paper-2 px-4 py-3 font-mono text-xs">{t("chartsEmpty")}</p>}
+      {rows.length ? <BarList rows={rows} caption={t("byYear")} /> : <p className="bg-mist px-4 py-3 tabular-nums text-xs">{t("chartsEmpty")}</p>}
     </section>
   );
 }

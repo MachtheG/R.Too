@@ -57,3 +57,10 @@
 - Lighthouse mobile (local `next start`): Accessibility 100, Best Practices 100, SEO 100 when NEXT_PUBLIC_SITE_URL matches the domain (92 locally only because the canonical points at production). Performance 91–96 across pages, median ~94: slightly under the 95 target locally; re-measure on Vercel.
 - Fact-checker verified the 2022 register, ward figures, growth, tea prices and EN/SW parity, and found no blockers. Fixed: unsupported "Hon." in JSON-LD removed; campaign-period dates and "polls open 6am" removed or marked; "gazette notice" corrected to "IEBC public notice"; ward count re-sourced; 2017 register (73,314) now verified against the IEBC PDF.
 - Design-critic fixes: dark-mode laterite text token (6.8:1), yellow focus ring on dark surfaces, yellow rationed (CTA band to tea, calendar button outlined, footer note in mist), 44px+ buttons, form borders ≥5:1, styled to-confirm chip, map tile edges.
+
+## 2026-11-25: Preset A restyle + campaign photos
+- Restyled to Preset A "Civic Green" (presets.md): tokens in globals.css only; Outfit + Inter; utility bar, boxed nav, gold CTA, draft band, split hero, cards, grouped footer.
+- Campaign photos (public/images/portrait): two portraits (hero, Story, Home card) and two posters + one billboard mock-up (Gallery, uncropped). Credited "Robert Too campaign": CONFIRM photographer. WhatsApp-compressed: request originals.
+- NOT published: the "CONFIRMED INCOMING MP" poster (claims an unheld election is won). Kept locally in /.unused-assets (git-ignored).
+- The posters say "Hon Robert Too": the "Hon." title is still TO CONFIRM. Remove those posters from data/photos.ts if the title can't be supported.
+- Run tests from PowerShell, not Git Bash: drive-letter casing (C:/ vs c:\) loads vitest twice and every suite fails with "reading 'config'".

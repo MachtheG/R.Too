@@ -26,10 +26,10 @@ export async function LandscapeBand({ locale }: { locale: string }) {
         <Container>
           <figcaption className="flex flex-col gap-1 py-4 text-sm sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
             <span>
-              <span className="eyebrow mr-2 text-pine">{t("eyebrow")}</span>
+              <span className="eyebrow mr-2 text-primary">{t("eyebrow")}</span>
               {photo && pick(photo.caption, locale)}
             </span>
-            {photo && <PhotoCredit photo={photo} className="font-mono text-[11px] text-muted-foreground" />}
+            {photo && <PhotoCredit photo={photo} className="tabular-nums text-[11px] text-muted-foreground" />}
           </figcaption>
         </Container>
       </figure>

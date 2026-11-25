@@ -18,8 +18,8 @@ export function ProjectsExplorer({ projects, wards }: Props) {
   return (
     <div className="flex flex-col gap-8">
       <FilterBar filters={filters} wards={wards} years={yearsOf(projects)} />
-      <p aria-live="polite" className="font-mono text-sm">{list.length} / {projects.length}</p>
-      {list.length ? <ProjectsTable projects={list} wards={wards} locale={locale} /> : <p className="max-w-2xl bg-paper-2 px-4 py-4">{t("empty")}</p>}
+      <p aria-live="polite" className="tabular-nums text-sm">{list.length} / {projects.length}</p>
+      {list.length ? <ProjectsTable projects={list} wards={wards} locale={locale} /> : <p className="max-w-2xl bg-mist px-4 py-4">{t("empty")}</p>}
     </div>
   );
 }

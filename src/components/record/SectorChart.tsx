@@ -13,7 +13,7 @@ export async function SectorChart({ locale }: { locale: string }) {
   return (
     <section aria-labelledby="sector-title" className="flex flex-col gap-4">
       <h2 id="sector-title" className="font-display text-3xl">{t("bySector")}</h2>
-      {rows.length ? <BarList rows={rows} caption={t("bySector")} /> : <p className="bg-paper-2 px-4 py-3 font-mono text-xs">{t("chartsEmpty")}</p>}
+      {rows.length ? <BarList rows={rows} caption={t("bySector")} /> : <p className="bg-mist px-4 py-3 tabular-nums text-xs">{t("chartsEmpty")}</p>}
     </section>
   );
 }

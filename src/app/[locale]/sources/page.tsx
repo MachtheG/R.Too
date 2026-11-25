@@ -14,12 +14,12 @@ export default async function SourcesPage() {
       <Container className="py-12">
         <ol className="flex flex-col">
           {sources.map((s, i) => (
-            <li key={s.id} id={s.id} className="grid scroll-mt-24 gap-2 border-b border-rule py-5 target:bg-uda/20 md:grid-cols-[3rem_1fr_auto] md:gap-6">
-              <span className="font-mono text-sm text-pine">{i + 1}</span>
+            <li key={s.id} id={s.id} className="grid scroll-mt-24 gap-2 border-b border-rule py-5 target:bg-accent/20 md:grid-cols-[3rem_1fr_auto] md:gap-6">
+              <span className="tabular-nums text-sm text-primary">{i + 1}</span>
               <div className="flex flex-col gap-1">
                 <p className="font-semibold">{s.title}</p>
                 <p className="text-sm text-muted-foreground">{s.publisher} · {s.date}</p>
-                <p className="flex gap-2 font-mono text-[11px] uppercase">
+                <p className="flex gap-2 tabular-nums text-[11px] uppercase">
                   <span className="border border-current px-1.5">{s.primary ? t("primary") : t("secondary")}</span>
                   <span className="border border-current px-1.5">{s.verified ? t("verified") : t("unverified")}</span>
                 </p>

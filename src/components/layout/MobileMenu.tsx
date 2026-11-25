@@ -16,7 +16,7 @@ export function MobileMenu({ items, menuLabel, closeLabel }: Props) {
         aria-controls="mobile-nav"
         aria-label={open ? closeLabel : menuLabel}
         onClick={() => setOpen((v) => !v)}
-        className="inline-flex size-11 items-center justify-center bg-tea text-mist"
+        className="inline-flex size-11 items-center justify-center rounded-md bg-primary text-paper"
       >
         {open ? <X aria-hidden className="size-5" /> : <Menu aria-hidden className="size-5" />}
       </button>
@@ -25,7 +25,7 @@ export function MobileMenu({ items, menuLabel, closeLabel }: Props) {
           <ul className="flex flex-col px-4 py-2">
             {items.map((i) => (
               <li key={i.href} className="border-t border-rule first:border-t-0">
-                <Link href={i.href} onClick={() => setOpen(false)} className="block py-3 font-display text-2xl text-ink dark:text-mist">
+                <Link href={i.href} onClick={() => setOpen(false)} className="block py-3 font-display text-xl text-ink dark:text-paper">
                   {i.label}
                 </Link>
               </li>

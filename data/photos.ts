@@ -26,7 +26,9 @@ export type Photo = {
   sample?: boolean; // stand-in image, not of the candidate
   approvedForPress: boolean;
   featured: boolean;
-  ratio: "4/5" | "3/2" | "16/9" | "1/1";
+  ratio: "4/5" | "3/2" | "16/9" | "1/1" | "2/3";
+  focus?: string; // CSS object-position for cover crops, e.g. "50% 15%" keeps a face in frame
+  fit?: "cover" | "contain"; // contain = never crop (posters with text built in)
 };
 
 const BY_SA_4 = { licence: "CC BY-SA 4.0", licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0/" };
@@ -39,22 +41,41 @@ const commons = (file: string) => `https://commons.wikimedia.org/wiki/File:${fil
 type SampleArgs = Omit<Photo, "file" | "sample" | "approvedForPress" | "featured"> & { file: string; featured?: boolean };
 const sample = (p: SampleArgs): Photo => ({ featured: false, ...p, sample: true, approvedForPress: false });
 
+// Campaign's own photos (supplied 2026-11-25 as WhatsApp copies; request originals for sharper large sizes).
+const CAMPAIGN = { credit: "Robert Too campaign", approvedForPress: false } as const; // CONFIRM: photographer name
+type CampaignArgs = Omit<Photo, "approvedForPress" | "featured" | "credit"> & { featured?: boolean };
+const own = (p: CampaignArgs): Photo => ({ featured: false, ...CAMPAIGN, ...p });
+
 export const photos: Photo[] = [
-  sample({
+  own({
     id: "hero-portrait", category: "portrait", ratio: "4/5", featured: true,
-    file: wm("thumb/e/e0/Tea_farming_Bomet.jpg/1280px-Tea_farming_Bomet.jpg"), // local copy: public/images/samples/bomet-tea-farm.jpg,
-    alt: { en: "A tea farm in Bomet County", sw: "Shamba la chai katika Kaunti ya Bomet" },
-    caption: { en: "A tea farm in Bomet.", sw: "Shamba la chai Bomet." },
-    brief: { en: "Robert Too among tea farmers, natural light, waist-up", sw: "Robert Too pamoja na wakulima wa chai, mwanga wa asili" },
-    credit: "Kiprotich Towett / Wikimedia Commons", ...BY_SA_4, sourceUrl: commons("Tea_farming_Bomet.jpg"),
+    file: "portrait/robert-too-portrait-lapel.jpg", focus: "50% 18%",
+    alt: { en: "Robert Too in a dark double-breasted suit, standing by a window overlooking green hills", sw: "Robert Too akiwa amevaa suti nyeusi, amesimama dirishani akitazama milima ya kijani" },
+    caption: { en: "Robert Too.", sw: "Robert Too." },
   }),
-  sample({
-    id: "story-home", category: "landscape", ratio: "4/5",
-    file: wm("thumb/5/50/Bomet-Tea.jpg/1280px-Bomet-Tea.jpg"), // local copy: public/images/samples/bomet-tea-highlands.jpg,
-    alt: { en: "Tea fields and eucalyptus trees in the Bomet highlands", sw: "Mashamba ya chai na miti ya mikaratusi milimani Bomet" },
-    caption: { en: "Tea in the Bomet highlands.", sw: "Chai katika nyanda za juu za Bomet." },
-    brief: { en: "Robert Too at home in Sotik", sw: "Robert Too nyumbani Sotik" },
-    credit: "Kipkorir Cheruiyot / Wikimedia Commons", ...BY_SA_4, sourceUrl: commons("Bomet-Tea.jpg"),
+  own({
+    id: "story-home", category: "portrait", ratio: "4/5",
+    file: "portrait/robert-too-portrait-window.jpg", focus: "50% 18%",
+    alt: { en: "Robert Too in a dark suit and white shirt, wearing a Kenyan-flag beaded bracelet, standing by a window", sw: "Robert Too akiwa amevaa suti nyeusi na shati jeupe, na bangili ya shanga ya bendera ya Kenya, amesimama dirishani" },
+    caption: { en: "Robert Too.", sw: "Robert Too." },
+  }),
+  own({
+    id: "poster-better-future", category: "events", ratio: "2/3", fit: "contain",
+    file: "portrait/poster-together-better-future.jpg",
+    alt: { en: "Campaign poster: Robert Too, MP 2027, Sotik Constituency, \"Together, we build a better future\"", sw: "Bango la kampeni: Robert Too, Mbunge 2027, Eneo Bunge la Sotik" },
+    caption: { en: "Campaign poster.", sw: "Bango la kampeni." },
+  }),
+  own({
+    id: "poster-stronger-sotik", category: "events", ratio: "2/3", fit: "contain",
+    file: "portrait/poster-stronger-sotik.jpg",
+    alt: { en: "Campaign poster: Robert Too, MP 2027, Sotik Constituency, \"Together for a stronger Sotik\"", sw: "Bango la kampeni: Robert Too, Mbunge 2027, \"Pamoja kwa Sotik yenye nguvu\"" },
+    caption: { en: "Campaign poster.", sw: "Bango la kampeni." },
+  }),
+  own({
+    id: "billboard-design", category: "events", ratio: "2/3", fit: "contain",
+    file: "portrait/billboard-design.jpg",
+    alt: { en: "Billboard design mock-up: Robert Too, MP 2027, Sotik Constituency", sw: "Mfano wa muundo wa bango kubwa: Robert Too, Mbunge 2027, Sotik" },
+    caption: { en: "Billboard design (mock-up).", sw: "Muundo wa bango kubwa (mfano)." },
   }),
   sample({
     id: "story-family", category: "community", ratio: "3/2",

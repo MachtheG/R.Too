@@ -18,9 +18,9 @@ export async function EntryCards({ locale }: { locale: string }) {
         <ol className="grid gap-10 md:grid-cols-3 md:gap-8">
           {entries.map((e) => (
             <li key={e.key}>
-              <Link href={e.href} className="group flex flex-col gap-3 border-t-2 border-ink pt-4 dark:border-mist">
-                <span aria-hidden className="font-display text-6xl leading-none font-light text-ink md:text-7xl dark:text-mist">{e.n}</span>
-                <span className="text-xl font-semibold group-hover:text-pine">{t(`${e.key}.title`)}</span>
+              <Link href={e.href} className="group card flex h-full flex-col gap-3 p-5 transition-colors hover:border-primary">
+                <span aria-hidden className="font-display text-5xl leading-none text-primary md:text-6xl">{e.n}</span>
+                <span className="text-xl font-semibold group-hover:text-primary">{t(`${e.key}.title`)}</span>
                 <span className="text-muted-foreground">{t(`${e.key}.body`)}</span>
                 <CampaignPhoto id={e.photo} locale={locale} ratio="3/2" caption={false} className="mt-2" sizes="(min-width: 768px) 33vw, 100vw" />
               </Link>

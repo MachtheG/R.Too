@@ -13,7 +13,7 @@ export function GalleryGrid({ photos }: { photos: Photo[] }) {
   const pathname = usePathname();
   const cat = useSearchParams().get("category");
   const list = photos.filter((p) => !cat || p.category === cat);
-  const chip = (active: boolean) => `inline-flex min-h-11 items-center border px-4 text-sm ${active ? "border-tea bg-tea text-mist" : "border-rule hover:border-tea"}`;
+  const chip = (active: boolean) => `inline-flex min-h-11 items-center rounded-md border px-4 text-sm ${active ? "border-primary bg-primary text-paper" : "border-rule hover:border-primary"}`;
 
   return (
     <div className="flex flex-col gap-8">

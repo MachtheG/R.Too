@@ -14,9 +14,9 @@ export function LocaleSwitch() {
       locale={other}
       hrefLang={other}
       aria-label={t("switchTo")}
-      className="inline-flex min-h-11 min-w-11 items-center justify-center border border-rule font-mono text-xs hover:border-tea"
+      className="group inline-flex min-h-11 min-w-11 items-center justify-center"
     >
-      {t("short")}
+      <span className="rounded-md border border-paper/40 px-2.5 py-1 text-xs font-semibold group-hover:border-accent group-hover:text-accent">{t("short")}</span>
     </Link>
   );
 }

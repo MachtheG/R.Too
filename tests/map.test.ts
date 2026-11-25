@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { tokens } from "@/lib/tokens";
 import { shadeFor, SELECTED } from "@/components/map/wardShades";
 import { wards } from "../data/wards";
 import { shapeFor } from "../data/sotikMap";
@@ -18,7 +19,7 @@ describe("map shading", () => {
     }
   });
   it("largest ward gets the darkest step", () => {
-    expect(shadeFor(21000, 12000, 21000).fill).toBe("#1d6b38");
+    expect(shadeFor(21000, 12000, 21000).fill).toBe(tokens.primary);
   });
   it("selected (yellow) ward label meets AA", () => {
     expect(ratio(SELECTED.fill, SELECTED.text)).toBeGreaterThanOrEqual(4.5);

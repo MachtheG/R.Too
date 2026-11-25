@@ -6,7 +6,7 @@ export function WardLocator({ slug, label, className }: { slug: string; label: s
   return (
     <svg viewBox={sotikMap.viewBox} role="img" aria-label={label} className={cn("h-auto w-full", className)}>
       {sotikMap.wards.map((w) => (
-        <path key={w.slug} d={w.path} className={w.slug === slug ? "fill-uda" : "fill-paper-2"} stroke="#fff" strokeWidth={3} />
+        <path key={w.slug} d={w.path} className={w.slug === slug ? "fill-accent stroke-paper" : "fill-mist stroke-paper"} strokeWidth={3} />
       ))}
       <path d={sotikMap.outline} className="fill-none stroke-ink stroke-[4]" />
     </svg>

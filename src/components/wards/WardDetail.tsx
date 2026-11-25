@@ -31,13 +31,13 @@ export async function WardDetail({ ward, locale }: { ward: Ward; locale: string 
 
   return (
     <Container className="flex flex-col gap-10 py-10 md:py-16">
-      <Link href="/wards" className="inline-flex min-h-11 items-center self-start font-mono text-sm underline underline-offset-4">← {t("detail.back")}</Link>
+      <Link href="/wards" className="inline-flex min-h-11 items-center self-start tabular-nums text-sm underline underline-offset-4">← {t("detail.back")}</Link>
       <div className="grid gap-8 md:grid-cols-12">
         <div className="flex flex-col gap-4 md:col-span-7">
-          <p className="eyebrow text-pine">{t("detail.rank", { rank })}</p>
-          <h1 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] leading-none text-ink dark:text-mist">{ward.name}</h1>
+          <p className="kicker">{t("detail.rank", { rank })}</p>
+          <h1 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] leading-none text-ink dark:text-paper">{ward.name}</h1>
           {plan && <p className="max-w-xl text-lg">{pick(plan.focus, locale)}</p>}
-          <dl className="grid grid-cols-2 gap-px border border-rule bg-rule sm:grid-cols-4">
+          <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-rule bg-rule sm:grid-cols-4">
             {[
               [<>{fmt.format(ward.voters2022)}<ToConfirm label={t("toConfirm")} className="ml-1" /></>, t("voters")],
               [pct.format(ward.voters2022 / totalWardVoters), t("share")],
@@ -50,7 +50,7 @@ export async function WardDetail({ ward, locale }: { ward: Ward; locale: string 
             ))}
           </dl>
           {shape && shape.neighbours.length > 0 && (
-            <p className="text-sm"><span className="eyebrow mr-2 text-pine">{tm("borders")}</span>{shape.neighbours.map((n) => (n.county === "Bomet" ? n.constituency : `${n.constituency} (${n.county})`)).join(" · ")}</p>
+            <p className="text-sm"><span className="eyebrow mr-2 text-primary">{tm("borders")}</span>{shape.neighbours.map((n) => (n.county === "Bomet" ? n.constituency : `${n.constituency} (${n.county})`)).join(" · ")}</p>
           )}
         </div>
         <div className="md:col-span-5">
@@ -58,22 +58,22 @@ export async function WardDetail({ ward, locale }: { ward: Ward; locale: string 
         </div>
       </div>
 
-      <section aria-labelledby="ward-plan" className="flex flex-col gap-4 bg-tea p-5 text-white md:p-8">
+      <section aria-labelledby="ward-plan" className="flex flex-col gap-4 rounded-lg bg-primary p-5 text-paper md:p-8">
         <div className="flex flex-wrap items-center gap-3">
           <h2 id="ward-plan" className="font-display text-3xl">{tm("planTitleWard", { ward: ward.name })}</h2>
-          {plan?.draft && <span className="bg-white"><DraftBadge label={tm("draft")} /></span>}
+          {plan?.draft && <span className="bg-paper"><DraftBadge label={tm("draft")} /></span>}
         </div>
         {plan && (
           <ol className="grid gap-4 md:grid-cols-3">
             {plan.items.map((it, i) => (
-              <li key={i} className="flex flex-col gap-2 border-t-2 border-uda pt-3">
-                <span className="font-mono text-[11px] tracking-wider text-uda uppercase">{String(i + 1).padStart(2, "0")} · {tm(`pledge.${it.pledge}`)}</span>
+              <li key={i} className="flex flex-col gap-2 border-t-2 border-accent pt-3">
+                <span className="tabular-nums text-[11px] tracking-wider text-accent uppercase">{String(i + 1).padStart(2, "0")} · {tm(`pledge.${it.pledge}`)}</span>
                 <span>{pick(it.text, locale)}</span>
               </li>
             ))}
           </ol>
         )}
-        <p className="text-sm text-white/85">{tm("planNote")}</p>
+        <p className="text-sm text-paper/85">{tm("planNote")}</p>
       </section>
 
       <CampaignPhoto id={wardPhoto[ward.slug]} locale={locale} ratio="16/9" />

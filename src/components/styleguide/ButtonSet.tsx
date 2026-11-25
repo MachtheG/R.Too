@@ -1,16 +1,16 @@
 import { getTranslations } from "next-intl/server";
-import { Button } from "@/components/ui/button";
 import { SectionTitle } from "./SectionTitle";
 
+/** The site's three button styles (utilities defined in globals.css). */
 export async function ButtonSet() {
   const t = await getTranslations("styleguide");
   return (
     <section className="flex flex-col gap-4">
       <SectionTitle>{t("buttons")}</SectionTitle>
       <div className="flex flex-wrap gap-3">
-        <Button className="h-12 px-6 font-semibold">{t("btn.primary")}</Button>
-        <Button variant="outline" className="h-12 border-tea px-6 font-semibold">{t("btn.outline")}</Button>
-        <Button className="h-12 bg-uda px-6 font-semibold text-ink hover:bg-uda/85">{t("btn.accent")}</Button>
+        <button type="button" className="btn btn-primary">{t("btn.accent")}</button>
+        <button type="button" className="btn btn-secondary">{t("btn.outline")}</button>
+        <span className="rounded-lg bg-primary p-2"><button type="button" className="btn btn-on-dark">{t("btn.primary")}</button></span>
       </div>
     </section>
   );

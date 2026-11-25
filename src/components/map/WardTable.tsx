@@ -11,7 +11,7 @@ export async function WardTable({ wards, total, locale }: { wards: Ward[]; total
       <table className="w-full border-collapse text-sm">
         <caption className="eyebrow pb-2 text-left text-muted-foreground">{t("tableCaption")}</caption>
         <thead>
-          <tr className="border-b-2 border-ink text-left dark:border-mist">
+          <tr className="border-b-2 border-ink text-left dark:border-paper">
             <th scope="col" className="p-2">{t("colWard")}</th>
             <th scope="col" className="p-2 text-right">{t("colVoters")}</th>
             <th scope="col" className="p-2 text-right">{t("colShare")}</th>
@@ -21,8 +21,8 @@ export async function WardTable({ wards, total, locale }: { wards: Ward[]; total
           {wards.map((w) => (
             <tr key={w.slug} className="border-b border-rule">
               <th scope="row" className="p-2 text-left font-normal">{w.name}</th>
-              <td className="p-2 text-right font-mono">{fmt.format(w.voters2022)}</td>
-              <td className="p-2 text-right font-mono">{pct.format(w.voters2022 / total)}</td>
+              <td className="p-2 text-right tabular-nums">{fmt.format(w.voters2022)}</td>
+              <td className="p-2 text-right tabular-nums">{pct.format(w.voters2022 / total)}</td>
             </tr>
           ))}
         </tbody>

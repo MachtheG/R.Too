@@ -7,7 +7,7 @@ export function WhatsAppShare({ text, label, path = "" }: { text: string; label:
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex min-h-12 items-center justify-center self-start border border-mist px-5 font-semibold hover:bg-mist hover:text-tea"
+      className="btn btn-secondary self-start"
     >
       {label}
     </a>

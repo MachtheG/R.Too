@@ -8,7 +8,7 @@ export async function MotifSet() {
     <section className="flex flex-col gap-4">
       <SectionTitle>{t("motifs")}</SectionTitle>
       <div className="grid gap-6 md:grid-cols-2">
-        <div className="tea-rows flex aspect-video items-end p-4 font-mono text-xs text-mist">{t("teaRows")}</div>
+        <div className="tea-rows flex aspect-video items-end p-4 tabular-nums text-xs text-paper">{t("teaRows")}</div>
         <PhotoPlaceholder ratio="4/5" label={t("placeholder")} note="Robert Too among tea farmers · ≥1600×2000" />
       </div>
     </section>

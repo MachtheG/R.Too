@@ -23,8 +23,8 @@ export async function MapPreview({ locale }: { locale: string }) {
       <Container className="flex flex-col gap-8 py-14 md:py-20">
         <div className="grid gap-4 lg:grid-cols-12 lg:items-end">
           <div className="flex flex-col gap-3 lg:col-span-7">
-            <p className="eyebrow text-pine">{t("eyebrow")}</p>
-            <h2 id="map-title" className="font-display text-4xl text-balance text-ink md:text-5xl dark:text-mist">{t("title")}</h2>
+            <p className="kicker">{t("eyebrow")}</p>
+            <h2 id="map-title" className="font-display text-4xl text-balance text-ink md:text-5xl dark:text-paper">{t("title")}</h2>
           </div>
           <p className="max-w-md text-lg leading-relaxed lg:col-span-5">
             {t("summary", { ward: top.name, voters: fmt.format(top.voters2022), share: pct.format(top.voters2022 / totalWardVoters) })}
@@ -36,27 +36,27 @@ export async function MapPreview({ locale }: { locale: string }) {
         <div className="flex flex-col gap-4 border-t border-rule pt-5">
           <p className="flex items-baseline justify-between gap-4">
             <span className="eyebrow">{t("total")}</span>
-            <span className="font-mono text-lg font-semibold tabular-nums">
+            <span className="tabular-nums text-lg font-semibold tabular-nums">
               {fmt.format(totalWardVoters)}
               <FootnoteMark n={totalN} sourceId="iebc-rov-2022" label={t("sourceLabel")} />
             </span>
           </p>
-          <ol className="flex flex-col gap-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+          <ol className="flex flex-col gap-1 tabular-nums text-[11px] leading-relaxed text-muted-foreground">
             <li>
               {wardN}.{" "}
-              <a href={src("mzalendo-sotik")?.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-pine">{t("source")}</a>
+              <a href={src("mzalendo-sotik")?.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-primary">{t("source")}</a>
               {!WARDS_VERIFIED && <> {t("toConfirm")}</>}
             </li>
             <li>
               {mapN}.{" "}
-              <a href={src("iebc-ward-boundaries")?.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-pine">{t("mapSource")}</a>
+              <a href={src("iebc-ward-boundaries")?.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-primary">{t("mapSource")}</a>
             </li>
           </ol>
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Link href="/wards" className="inline-flex min-h-12 items-center justify-center bg-uda px-6 font-semibold text-ink hover:bg-ink hover:text-white">
+            <Link href="/wards" className="btn btn-primary">
               {t("cta")}
             </Link>
-            <Link href="/map" className="inline-flex min-h-12 items-center justify-center font-semibold underline underline-offset-4 hover:text-pine sm:px-4">
+            <Link href="/map" className="inline-flex min-h-12 items-center justify-center font-semibold underline underline-offset-4 hover:text-primary sm:px-4">
               {t("mapCta")} →
             </Link>
           </div>

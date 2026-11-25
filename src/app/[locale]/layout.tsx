@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
+import { Outfit, Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { locale as rootLocale } from "next/root-params";
@@ -10,11 +10,10 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import "../globals.css";
 
-// Only the display face is preloaded: it paints the hero H1 (the LCP element).
-const fraunces = Fraunces({ subsets: ["latin"], weight: ["300", "400", "600"], variable: "--font-fraunces" });
-const frauncesItalic = Fraunces({ subsets: ["latin"], weight: "400", style: "italic", variable: "--font-fraunces-italic", preload: false });
-const inter = Inter({ subsets: ["latin"], weight: ["400", "600"], variable: "--font-inter", preload: false });
-const plexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["500"], variable: "--font-plex-mono", preload: false });
+// Preset A type: Outfit (headings, preloaded: it paints the hero H1, the LCP element) + Inter (body).
+// latin-ext covers Kiswahili diacritics.
+const outfit = Outfit({ subsets: ["latin", "latin-ext"], variable: "--font-outfit", display: "swap" });
+const inter = Inter({ subsets: ["latin", "latin-ext"], variable: "--font-inter", display: "swap", preload: false });
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -30,9 +29,9 @@ export default async function LocaleLayout({ children }: LayoutProps<"/[locale]"
   const t = await getTranslations("common");
 
   return (
-    <html lang={locale} className={`${fraunces.variable} ${frauncesItalic.variable} ${inter.variable} ${plexMono.variable}`}>
+    <html lang={locale} className={`${outfit.variable} ${inter.variable}`}>
       <body className="min-h-dvh flex flex-col">
-        <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-uda focus:px-4 focus:py-2 focus:text-ink">
+        <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:rounded-md focus:bg-accent focus:px-4 focus:py-2 focus:text-ink">
           {t("skipToContent")}
         </a>
         <NextIntlClientProvider>

@@ -6,7 +6,7 @@ export function LiteToggle() {
   const t = useTranslations("common.lite");
   const lite = useLiteMode();
   return (
-    <button type="button" aria-pressed={lite} onClick={() => setLiteMode(!lite)} className="min-h-11 text-left text-sm underline underline-offset-4 hover:text-mist">
+    <button type="button" aria-pressed={lite} onClick={() => setLiteMode(!lite)} className="min-h-11 text-left text-sm underline underline-offset-4 hover:text-accent">
       {lite ? t("on") : t("off")}
     </button>
   );

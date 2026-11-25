@@ -11,10 +11,10 @@ export function BarList({ rows, caption }: { rows: Row[]; caption: string }) {
           <li key={r.label} className="flex flex-col gap-1">
             <div className="flex justify-between gap-4 text-sm">
               <span>{r.label}</span>
-              <span className="font-mono">{r.display}</span>
+              <span className="tabular-nums">{r.display}</span>
             </div>
-            <div aria-hidden className="h-2.5 bg-paper-2">
-              <div className={r.tone === "pine" ? "h-full bg-pine" : "h-full bg-tea dark:bg-[#9cc3a6]"} style={{ width: `${(r.value / max) * 100}%` }} />
+            <div aria-hidden className="h-2.5 bg-mist">
+              <div className={r.tone === "pine" ? "h-full bg-primary" : "h-full bg-primary dark:bg-leaf"} style={{ width: `${(r.value / max) * 100}%` }} />
             </div>
           </li>
         ))}

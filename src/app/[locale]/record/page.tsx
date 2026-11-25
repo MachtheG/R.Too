@@ -17,7 +17,7 @@ export default async function RecordPage() {
   return (
     <>
       <PageHeader eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")}>
-        <p className="font-mono text-sm">{t("count", { count: projects.length })}</p>
+        <p className="tabular-nums text-sm">{t("count", { count: projects.length })}</p>
       </PageHeader>
       <Container className="grid gap-12 py-12 lg:grid-cols-2">
         <Timeline locale={locale} />
@@ -27,7 +27,7 @@ export default async function RecordPage() {
         </div>
       </Container>
       <Container className="pb-16">
-        <Link href="/projects" className="inline-flex min-h-12 items-center bg-uda px-6 font-semibold text-ink hover:bg-ink hover:text-white">
+        <Link href="/projects" className="btn btn-primary">
           {t("ledgerCta")} →
         </Link>
       </Container>

@@ -8,9 +8,9 @@ import { PhotoPlaceholder } from "./PhotoPlaceholder";
 /** Credit line: "Author / Source · Licence", each part linked when we have the URL. */
 export function PhotoCredit({ photo, className }: { photo: Photo; className?: string }) {
   if (!photo.credit) return null;
-  const link = "underline underline-offset-2 hover:text-pine";
+  const link = "underline underline-offset-2 hover:text-primary";
   return (
-    <span className={className ?? "block font-mono text-[11px] text-muted-foreground"}>
+    <span className={className ?? "block tabular-nums text-[11px] text-muted-foreground"}>
       {photo.sourceUrl ? <a href={photo.sourceUrl} target="_blank" rel="noopener noreferrer" className={link}>{photo.credit}</a> : photo.credit}
       {photo.licence && (
         <>
@@ -22,7 +22,7 @@ export function PhotoCredit({ photo, className }: { photo: Photo; className?: st
   );
 }
 
-const ratioCls = { "4/5": "aspect-[4/5]", "3/2": "aspect-[3/2]", "16/9": "aspect-video", "1/1": "aspect-square" } as const;
+const ratioCls = { "4/5": "aspect-[4/5]", "3/2": "aspect-[3/2]", "16/9": "aspect-video", "1/1": "aspect-square", "2/3": "aspect-[2/3]" } as const;
 
 type Props = {
   id?: string;
@@ -42,7 +42,7 @@ type Props = {
 export function SampleChip({ className }: { className?: string }) {
   const t = useTranslations("common.photo");
   return (
-    <span className={cn("pointer-events-none absolute top-3 left-3 bg-uda px-2 py-1 font-mono text-[10px] font-semibold tracking-wider text-ink uppercase", className)}>
+    <span className={cn("pointer-events-none absolute top-3 left-3 rounded bg-accent px-2 py-1 tabular-nums text-[10px] font-semibold tracking-wider text-ink uppercase", className)}>
       {t("sample")}
     </span>
   );
@@ -58,8 +58,8 @@ export function CampaignPhoto({ id, photo: given, locale, ratio, boxClassName, c
   }
   return (
     <figure className={cn("flex flex-col gap-2", className)}>
-      <div className={cn("relative overflow-hidden bg-paper-2", ratioCls[r], boxClassName)}>
-        <Image src={src} alt={pick(photo.alt, locale)} fill sizes={sizes} className="object-cover" priority={priority} />
+      <div className={cn("photo-frame relative bg-mist", ratioCls[r], boxClassName)}>
+        <Image src={src} alt={pick(photo.alt, locale)} fill sizes={sizes} className={photo.fit === "contain" ? "object-contain" : "object-cover"} style={photo.focus ? { objectPosition: photo.focus } : undefined} priority={priority} />
         {photo.sample && <SampleChip />}
       </div>
       {caption && (

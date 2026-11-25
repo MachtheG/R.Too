@@ -4,64 +4,69 @@
 
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-/* Campaign tokens: see docs/CREATIVE-DIRECTION.md
-   Scheme: white base, black text, UDA yellow accent, green secondary.
-   Yellow is a FILL colour (buttons, highlights, chips) with black text on it; never yellow text on white. */
+/* ==========================================================================
+   DESIGN TOKENS: Preset A "Civic Green" (presets.md). The single source of truth.
+   Components use these through Tailwind utilities (bg-primary, text-ink, …);
+   no component hard-codes a colour or font. src/lib/tokens.ts mirrors the hex
+   values for places that cannot read CSS (OG image, SVG map) and a test keeps
+   the two in sync. Contrast (WCAG): ink on paper 13.4:1, muted on paper 7.0:1,
+   paper on primary 6.3:1, ink on accent 6.3:1. Gold is a FILL, never text on white.
+   ========================================================================== */
 :root {
-  --tea: #14532d;      /* green (secondary): bands, panels, outlines. White text on it: 9.9:1 */
-  --leaf: #1e6b3a;     /* green for text on white (6.6:1) and hovers */
-  --pine: #1a6634;     /* green accent text: eyebrows, links on hover, focus ring (6.9:1 on white) */
-  --mist: #ffffff;     /* main white; also text on green/black */
-  --paper-2: #f4f5f1;  /* soft panel grey */
-  --ink: #0a0a0a;      /* text black */
-  --ink-soft: #2f2f2f;
-  --rule: #e2e3dc;
-  --uda: #ffcc00;      /* UDA yellow accent (black text on it: 13:1) */
-  --night: #0a0a0a;    /* footer black */
+  --ink: #0c3320;          /* headings and body text */
+  --primary: #0b6e3a;      /* utility bar, links, active states, CTA band */
+  --leaf: #1c8c4e;         /* hover, secondary green */
+  --accent: #d4a62a;       /* the one loud CTA colour + kicker rule */
+  --accent-deep: #c8961e;  /* accent hover */
+  --mist: #f1f4ef;         /* hero and alternate section backgrounds */
+  --gold-soft: #f7efd8;    /* notice banners */
+  --paper: #ffffff;        /* base background */
+  --muted: #4b5b52;        /* secondary text */
+  --rule: #e3e8e1;         /* dividers and borders */
+  --danger: #b42318;       /* form errors on light surfaces */
+  --danger-on-dark: #ffb4ab;
 
-  /* shadcn mapping */
-  --background: var(--mist);
+  --radius: 0.375rem;      /* 6px: buttons, inputs */
+  --radius-card: 0.5rem;   /* 8px: cards, photos */
+  --shadow-photo: 0 18px 40px -18px rgb(12 51 32 / 0.35);
+  --content-max: 80rem;    /* 1280px */
+
+  /* shadcn semantic mapping */
+  --background: var(--paper);
   --foreground: var(--ink);
-  --card: var(--mist);
+  --card: var(--paper);
   --card-foreground: var(--ink);
-  --popover: var(--mist);
+  --popover: var(--paper);
   --popover-foreground: var(--ink);
-  --primary: var(--tea);
-  --primary-foreground: var(--mist);
-  --secondary: var(--paper-2);
+  --primary-foreground: var(--paper);
+  --secondary: var(--mist);
   --secondary-foreground: var(--ink);
-  --muted: var(--paper-2);
-  --muted-foreground: #4d4d4d;
-  --accent: var(--uda);
+  --muted-bg: var(--mist);
+  --muted-foreground: var(--muted);
   --accent-foreground: var(--ink);
-  --destructive: #b3261e;
+  --destructive: var(--danger);
   --border: var(--rule);
   --input: var(--rule);
-  --ring: var(--pine);
-  --chart-1: var(--tea);
-  --chart-2: var(--pine);
+  --ring: var(--primary);
+  --chart-1: var(--primary);
+  --chart-2: var(--accent);
   --chart-3: var(--leaf);
-  --chart-4: #c88a72;
-  --chart-5: var(--uda);
-  --radius: 0.125rem;
+  --chart-4: var(--muted);
+  --chart-5: var(--ink);
 }
 
-/* The brief is a white site, so the OS dark-mode preference is deliberately NOT followed.
-   An explicit dark theme remains available via <html data-theme="dark">. */
+/* Explicit dark theme only (the OS preference is not followed: the brief is a light site). */
 :root[data-theme="dark"] {
-  --background: var(--night);
-  --foreground: var(--mist);
-  --card: #141414;
-  --card-foreground: var(--mist);
-  --primary: var(--mist);
-  --primary-foreground: var(--night);
-  --secondary: #1a1a1a;
-  --muted: #1a1a1a;
-  --muted-foreground: #b5b5b5;
-  --border: #333333;
-  --rule: #333333;
-  --paper-2: #161616;
-  --pine: #6fcf8f;
+  --background: #07170f;
+  --foreground: var(--paper);
+  --card: #0e2418;
+  --card-foreground: var(--paper);
+  --secondary: #0e2418;
+  --muted-bg: #0e2418;
+  --muted-foreground: #b7c4bc;
+  --border: #23402f;
+  --rule: #23402f;
+  --mist: #0e2418;
 }
 
 @theme inline {
@@ -75,7 +80,7 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
+  --color-muted: var(--muted-bg);
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
@@ -89,27 +94,25 @@
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
 
-  --color-tea: var(--tea);
-  --color-leaf: var(--leaf);
-  --color-pine: var(--pine);
-  --color-mist: var(--mist);
-  --color-paper-2: var(--paper-2);
   --color-ink: var(--ink);
-  --color-ink-soft: var(--ink-soft);
+  --color-leaf: var(--leaf);
+  --color-accent-deep: var(--accent-deep);
+  --color-mist: var(--mist);
+  --color-gold-soft: var(--gold-soft);
+  --color-paper: var(--paper);
   --color-rule: var(--rule);
-  --color-uda: var(--uda);
-  --color-night: var(--night);
+  --color-danger: var(--danger);
+  --color-danger-on-dark: var(--danger-on-dark);
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
-  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+  --font-display: var(--font-outfit), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-display);
-  --font-display-italic: var(--font-fraunces-italic), var(--font-fraunces), ui-serif, Georgia, serif;
 
   --radius-sm: var(--radius);
   --radius-md: var(--radius);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 2);
+  --radius-lg: var(--radius-card);
+  --radius-xl: calc(var(--radius-card) * 1.5);
+  --shadow-photo: var(--shadow-photo);
 }
 
 @layer base {
@@ -122,29 +125,104 @@
   }
   body {
     @apply bg-background text-foreground antialiased;
-    font-feature-settings: "tnum" 1;
+    font-size: 1.0625rem; /* 17px body */
+    line-height: 1.6;
   }
+  /* Headings: Outfit, tight tracking; H1 700, H2/H3 600. */
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+    line-height: 1.08;
+  }
+  h1 { font-weight: 700; }
+  h2, h3, .font-display { font-weight: 600; }
   :focus-visible {
-    outline: 2px solid var(--pine);
+    outline: 2px solid var(--primary);
     outline-offset: 2px;
   }
-  /* On dark surfaces pine drops below 3:1; use UDA yellow (7:1+) for the focus ring. */
-  .bg-tea :focus-visible, .bg-night :focus-visible, footer :focus-visible, .bg-ink :focus-visible {
-    outline-color: var(--uda);
+  /* On green/dark surfaces the green ring disappears: use gold. */
+  .bg-primary :focus-visible, .bg-ink :focus-visible, footer :focus-visible {
+    outline-color: var(--accent);
   }
 }
 
+/* --- Components built only from tokens ------------------------------------ */
+
+/* Small uppercase label (stat labels, metadata). */
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+/* Section kicker above an H1/H2: eyebrow + short gold rule. */
+@utility kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary);
+  &::before {
+    content: "";
+    width: 2rem;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+}
+@utility btn {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: var(--radius);
+  padding-inline: 1.5rem;
+  font-weight: 600;
+  transition: background-color 150ms, color 150ms, border-color 150ms;
+}
+/* The one loud CTA. */
+@utility btn-primary {
+  background: var(--accent);
+  color: var(--ink);
+  &:hover { background: var(--accent-deep); }
+}
+/* Quieter secondary action. */
+@utility btn-secondary {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+  &:hover { background: var(--primary); color: var(--paper); }
+}
+/* Secondary action on a green/dark band. */
+@utility btn-on-dark {
+  border: 2px solid var(--paper);
+  color: var(--paper);
+  &:hover { background: var(--paper); color: var(--primary); }
+}
+@utility card {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-card);
+  background: var(--card);
+}
+@utility photo-frame {
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-photo);
+  overflow: hidden;
+}
+
+/* Placeholder textures (photo slots awaiting images). */
 @utility tea-rows {
-  background-image: repeating-linear-gradient(-32deg, var(--tea) 0 2px, #1b6338 2px 14px);
+  background-image: repeating-linear-gradient(-32deg, var(--primary) 0 2px, var(--leaf) 2px 14px);
 }
 @utility tea-rows-light {
-  background-image: repeating-linear-gradient(-32deg, var(--paper-2) 0 1px, transparent 1px 10px);
-}
-@utility eyebrow {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  background-image: repeating-linear-gradient(-32deg, var(--rule) 0 1px, transparent 1px 10px);
 }
 
 @media (prefers-reduced-motion: reduce) {

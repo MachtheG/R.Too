@@ -16,7 +16,7 @@ export default async function ProjectsPage() {
     <>
       <PageHeader eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")} />
       <Container className="py-10 pb-16">
-        <Suspense fallback={<p className="font-mono text-xs">…</p>}>
+        <Suspense fallback={<p className="tabular-nums text-xs">…</p>}>
           <ProjectsExplorer projects={projects} wards={wardOptions} />
         </Suspense>
       </Container>

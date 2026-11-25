@@ -1,15 +1,18 @@
 import { getTranslations } from "next-intl/server";
+import { tokens } from "@/lib/tokens";
 import { SectionTitle } from "./SectionTitle";
 
-// Keep in sync with :root in src/app/globals.css.
+// Preset A tokens (values from src/lib/tokens.ts, which a test keeps in sync with globals.css).
 const swatches = [
-  { name: "white (mist)", hex: "#FFFFFF", cls: "bg-mist ring-1 ring-rule ring-inset", text: "text-ink" },
-  { name: "ink (text)", hex: "#0A0A0A", cls: "bg-ink", text: "text-mist" },
-  { name: "uda (accent)", hex: "#FFCC00", cls: "bg-uda", text: "text-ink" },
-  { name: "tea (secondary)", hex: "#14532D", cls: "bg-tea", text: "text-mist" },
-  { name: "pine (green text)", hex: "#1A6634", cls: "bg-pine", text: "text-mist" },
-  { name: "paper-2", hex: "#F4F5F1", cls: "bg-paper-2", text: "text-ink" },
-  { name: "rule", hex: "#E2E3DC", cls: "bg-rule", text: "text-ink" },
+  { name: "paper", cls: "bg-paper ring-1 ring-rule ring-inset", text: "text-ink" },
+  { name: "mist", cls: "bg-mist", text: "text-ink" },
+  { name: "ink", cls: "bg-ink", text: "text-paper" },
+  { name: "primary", cls: "bg-primary", text: "text-paper" },
+  { name: "leaf", cls: "bg-leaf", text: "text-paper" },
+  { name: "accent", cls: "bg-accent", text: "text-ink" },
+  { name: "gold-soft", cls: "bg-gold-soft", text: "text-ink" },
+  { name: "muted", cls: "bg-muted-foreground", text: "text-paper" },
+  { name: "rule", cls: "bg-rule", text: "text-ink" },
 ] as const;
 
 export async function ColourSwatches() {
@@ -17,11 +20,11 @@ export async function ColourSwatches() {
   return (
     <section className="flex flex-col gap-4">
       <SectionTitle>{t("colours")}</SectionTitle>
-      <ul className="grid grid-cols-2 gap-px border border-rule bg-rule sm:grid-cols-4 lg:grid-cols-7">
+      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-9">
         {swatches.map((s) => (
-          <li key={s.name} className={`${s.cls} ${s.text} flex aspect-[4/5] flex-col justify-end p-3`}>
+          <li key={s.name} className={`${s.cls} ${s.text} flex aspect-[4/5] flex-col justify-end rounded-lg p-3`}>
             <span className="text-sm font-semibold">{s.name}</span>
-            <span className="font-mono text-xs">{s.hex}</span>
+            <span className="text-xs tabular-nums">{tokens[s.name as keyof typeof tokens].toUpperCase()}</span>
           </li>
         ))}
       </ul>

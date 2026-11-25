@@ -40,7 +40,7 @@ export function SotikMap({ wards, total, headingLevel = "h3" }: Props) {
       <figure className="flex flex-col gap-3 lg:col-span-7">
         {!lite && (
           <svg viewBox={sotikMap.viewBox} role="group" aria-label={t("mapLabel")} className="h-auto w-full max-h-[78vh] touch-manipulation">
-            <path d={sotikMap.outline} className="fill-paper-2" />
+            <path d={sotikMap.outline} className="fill-mist" />
             {wards.map((w) => {
               const s = shapeFor(w.slug);
               if (!s) return null;
@@ -57,7 +57,7 @@ export function SotikMap({ wards, total, headingLevel = "h3" }: Props) {
                   onClick={() => setSel(w.slug)}
                   onKeyDown={onKey(w.slug)}
                   style={{ fill: shade.fill }}
-                  className="cursor-pointer stroke-white stroke-[3] outline-none transition-[fill] hover:brightness-95 focus-visible:stroke-ink focus-visible:stroke-[6]"
+                  className="cursor-pointer stroke-paper stroke-[3] outline-none transition-[fill] hover:brightness-95 focus-visible:stroke-ink focus-visible:stroke-[6]"
                 />
               );
             })}
@@ -73,7 +73,7 @@ export function SotikMap({ wards, total, headingLevel = "h3" }: Props) {
                   {lines.map((line, i) => (
                     <text key={i} x={s.label.x} y={y0 + i * 38} textAnchor="middle" className="font-sans font-semibold" style={{ fontSize: 34 }}>{line}</text>
                   ))}
-                  <text x={s.label.x} y={y0 + lines.length * 38 + 2} textAnchor="middle" className="font-mono" style={{ fontSize: 28 }}>{fmt.format(w.voters2022)}</text>
+                  <text x={s.label.x} y={y0 + lines.length * 38 + 2} textAnchor="middle" className="tabular-nums" style={{ fontSize: 28 }}>{fmt.format(w.voters2022)}</text>
                 </g>
               );
             })}
@@ -85,13 +85,13 @@ export function SotikMap({ wards, total, headingLevel = "h3" }: Props) {
             <span aria-hidden className="flex h-2.5 w-28">{[0, 1, 2, 3, 4].map((i) => <span key={i} className="flex-1" style={{ background: shadeFor(min + ((max - min) * i) / 4, min, max).fill }} />)}</span>
             <span>{t("legendHigh")}</span>
           </span>
-          <span className="font-mono text-[11px] text-muted-foreground">{lite ? t("lite") : t("boundaries")}</span>
+          <span className="tabular-nums text-[11px] text-muted-foreground">{lite ? t("lite") : t("boundaries")}</span>
         </figcaption>
       </figure>
 
       {/* Ward list + selected ward */}
       <div className="flex flex-col gap-5 lg:col-span-5">
-        <div role="group" aria-label={t("chooseWard")} className="flex flex-col border-t-2 border-ink">
+        <div role="group" aria-label={t("chooseWard")} className="card flex flex-col overflow-hidden">
           {wards.map((w) => {
             const on = w.slug === sel;
             return (
@@ -100,50 +100,50 @@ export function SotikMap({ wards, total, headingLevel = "h3" }: Props) {
                 type="button"
                 aria-pressed={on}
                 onClick={() => setSel(w.slug)}
-                className={`grid min-h-12 grid-cols-[1fr_auto] items-center gap-4 border-b border-rule px-3 text-left ${on ? "bg-uda text-ink" : "hover:bg-paper-2"}`}
+                className={`grid min-h-12 grid-cols-[1fr_auto] items-center gap-4 border-b border-rule px-3 text-left ${on ? "bg-accent text-ink" : "hover:bg-mist"}`}
               >
                 <span className="font-display text-lg">{w.name}</span>
-                <span className="font-mono text-sm tabular-nums">{fmt.format(w.voters2022)}</span>
+                <span className="tabular-nums text-sm tabular-nums">{fmt.format(w.voters2022)}</span>
               </button>
             );
           })}
         </div>
 
-        <article aria-live="polite" className="flex flex-col gap-4 bg-tea p-5 text-white md:p-6">
+        <article aria-live="polite" className="flex flex-col gap-4 rounded-lg bg-primary p-5 text-paper md:p-6">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <H className="font-display text-3xl">{ward.name}</H>
-            {plan?.draft && <span className="bg-white"><DraftBadge label={t("draft")} /></span>}
+            {plan?.draft && <span className="bg-paper"><DraftBadge label={t("draft")} /></span>}
           </div>
-          {plan && <p className="text-white/90">{pick(plan.focus, locale)}</p>}
+          {plan && <p className="text-paper/90">{pick(plan.focus, locale)}</p>}
 
-          <dl className="grid grid-cols-2 gap-px bg-white/20 text-sm">
+          <dl className="grid grid-cols-2 gap-px bg-paper/20 text-sm">
             {[
               [fmt.format(ward.voters2022), t("voters")],
               [pct.format(ward.voters2022 / total), t("share")],
               ...(shape ? [[`${fmt.format(shape.areaKm2)} km²`, t("area")], [fmt.format(densityFor(sel)), t("density")]] : []),
             ].map(([v, k]) => (
-              <div key={k} className="flex flex-col bg-tea p-3">
-                <dt className="order-2 text-white/80">{k}</dt>
-                <dd className="font-display text-2xl text-uda">{v}</dd>
+              <div key={k} className="flex flex-col bg-primary p-3">
+                <dt className="order-2 text-paper/80">{k}</dt>
+                <dd className="font-display text-2xl text-accent">{v}</dd>
               </div>
             ))}
           </dl>
           {shape && shape.neighbours.length > 0 && (
-            <p className="text-sm text-white/85">
-              <span className="eyebrow mr-2 text-uda">{t("borders")}</span>
+            <p className="text-sm text-paper/85">
+              <span className="eyebrow mr-2 text-accent">{t("borders")}</span>
               {shape.neighbours.map((n) => (n.county === "Bomet" ? n.constituency : `${n.constituency} (${n.county})`)).join(" · ")}
             </p>
           )}
 
           {plan && (
-            <div className="flex flex-col gap-2 border-t border-white/25 pt-4">
-              <p className="eyebrow text-uda">{t("planTitle")}</p>
+            <div className="flex flex-col gap-2 border-t border-paper/25 pt-4">
+              <p className="eyebrow text-accent">{t("planTitle")}</p>
               <ol className="flex flex-col gap-3">
                 {plan.items.map((it, i) => (
                   <li key={i} className="grid grid-cols-[auto_1fr] gap-3">
-                    <span aria-hidden className="flex size-7 items-center justify-center bg-uda font-mono text-xs font-semibold text-ink">{i + 1}</span>
+                    <span aria-hidden className="flex size-7 items-center justify-center bg-accent tabular-nums text-xs font-semibold text-ink">{i + 1}</span>
                     <span>
-                      <span className="mr-1.5 font-mono text-[11px] tracking-wider text-uda uppercase">{t(`pledge.${it.pledge}`)}</span>
+                      <span className="mr-1.5 tabular-nums text-[11px] tracking-wider text-accent uppercase">{t(`pledge.${it.pledge}`)}</span>
                       {pick(it.text, locale)}
                     </span>
                   </li>
@@ -151,7 +151,7 @@ export function SotikMap({ wards, total, headingLevel = "h3" }: Props) {
               </ol>
             </div>
           )}
-          <Link href={`/wards/${ward.slug}`} className="inline-flex min-h-11 items-center self-start bg-uda px-4 font-semibold text-ink hover:bg-white">
+          <Link href={`/wards/${ward.slug}`} className="btn btn-primary self-start">
             {t("open")} →
           </Link>
         </article>

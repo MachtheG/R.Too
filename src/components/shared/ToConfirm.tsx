@@ -10,7 +10,7 @@ export function ToConfirm({ label, className }: { label: string; className?: str
   return (
     <>
       {" "}
-      <span className={cn("ml-2 inline-block border border-current px-1.5 py-0.5 align-middle font-mono text-[10px] tracking-wider uppercase opacity-80", className)}>
+      <span className={cn("ml-2 inline-block border border-current px-1.5 py-0.5 align-middle tabular-nums text-[10px] tracking-wider uppercase opacity-80", className)}>
         <span className="sr-only">(</span>
         {label}
         <span className="sr-only">)</span>

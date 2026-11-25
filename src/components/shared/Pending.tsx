@@ -23,7 +23,7 @@ export function Pending({ text }: { text: string }) {
           <Fragment key={i}>{part}</Fragment>
         ) : (
           <span key={i} data-pending="" className="text-muted-foreground">
-            <ToConfirm label={t("toConfirm")} className="mr-1.5 ml-0 text-pine opacity-100" />
+            <ToConfirm label={t("toConfirm")} className="mr-1.5 ml-0 text-primary opacity-100" />
             {part && <em>{part}</em>}
           </span>
         ),
